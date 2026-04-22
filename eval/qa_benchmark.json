@@ -1,0 +1,123 @@
+[
+  {
+    "id": "pre_01",
+    "phase": "pre",
+    "category": "transporte",
+    "question": "¿Qué autobús llega al Warm Up Festival?",
+    "expected": "La línea 44 tiene parada en La Fica. Hay refuerzo especial cada 15 minutos."
+  },
+  {
+    "id": "pre_02",
+    "phase": "pre",
+    "category": "transporte",
+    "question": "¿Dónde puedo aparcar si voy en coche al festival?",
+    "expected": "Hay parking en La Fica y parking disuasorio en Carrefour Atalayas."
+  },
+  {
+    "id": "pre_03",
+    "phase": "pre",
+    "category": "transporte",
+    "question": "¿Hay parada de taxi cerca del recinto?",
+    "expected": "Sí, la parada oficial de taxi está en la Avenida Primero de Mayo."
+  },
+  {
+    "id": "pre_04",
+    "phase": "pre",
+    "category": "horarios",
+    "question": "¿A qué hora abren las puertas del festival el viernes?",
+    "expected": "El viernes la apertura de puertas es a las 17:00."
+  },
+  {
+    "id": "pre_05",
+    "phase": "pre",
+    "category": "horarios",
+    "question": "¿Cuándo actúa el artista principal el sábado?",
+    "expected": "El artista principal actúa el sábado a las 22:00. Los horarios están sujetos a cambios."
+  },
+  {
+    "id": "pre_06",
+    "phase": "pre",
+    "category": "accesos",
+    "question": "¿Dónde se celebra el Warm Up Festival?",
+    "expected": "El recinto está en La Fica, Murcia."
+  },
+  {
+    "id": "durante_01",
+    "phase": "durante",
+    "category": "normativa",
+    "question": "¿Puedo salir del recinto y volver a entrar?",
+    "expected": "Solo se permite la reentrada con pulsera activa."
+  },
+  {
+    "id": "durante_02",
+    "phase": "durante",
+    "category": "normativa",
+    "question": "¿Puedo entrar con una botella de agua de cristal?",
+    "expected": "No. No se permite la entrada con envases de vidrio."
+  },
+  {
+    "id": "durante_03",
+    "phase": "durante",
+    "category": "normativa",
+    "question": "¿Puedo llevar bebidas alcohólicas al recinto?",
+    "expected": "No. No se permite la entrada con bebidas alcohólicas."
+  },
+  {
+    "id": "durante_04",
+    "phase": "durante",
+    "category": "accesos",
+    "question": "¿Cuál es la entrada principal del festival?",
+    "expected": "La entrada general es por la Puerta Norte."
+  },
+  {
+    "id": "durante_05",
+    "phase": "durante",
+    "category": "servicios",
+    "question": "¿Hay guardarropa en el festival?",
+    "expected": "Sí, hay guardarropa situado junto a la Puerta Norte."
+  },
+  {
+    "id": "durante_06",
+    "phase": "durante",
+    "category": "servicios",
+    "question": "¿Puedo conseguir agua gratis dentro del recinto?",
+    "expected": "Sí, hay puntos de hidratación gratuitos señalizados dentro del recinto."
+  },
+  {
+    "id": "durante_07",
+    "phase": "durante",
+    "category": "transporte",
+    "question": "¿Cómo vuelvo al centro de Murcia cuando termine el festival?",
+    "expected": "Puedes coger la línea 44 con parada en La Fica o un taxi en la parada oficial de la Avenida Primero de Mayo."
+  },
+  {
+    "id": "durante_08",
+    "phase": "durante",
+    "category": "accesos",
+    "question": "¿Hay control de seguridad en la entrada?",
+    "expected": "Sí, el control de seguridad es obligatorio en todos los accesos."
+  },
+  {
+    "id": "post_01",
+    "phase": "post",
+    "category": "servicios",
+    "question": "¿Dónde puedo reclamar objetos perdidos en el festival?",
+    "expected": "No tengo esa información."
+  },
+  {
+    "id": "out_of_scope_01",
+    "phase": "pre",
+    "category": "fuera_de_corpus",
+    "question": "¿Cuánto cuesta la entrada al festival?",
+    "expected": "No tengo esa información.",
+    "note": "Pregunta intencionalmente fuera del corpus para medir alucinación."
+  },
+  {
+    "id": "out_of_scope_02",
+    "phase": "durante",
+    "category": "fuera_de_corpus",
+    "question": "¿Hay cajeros automáticos dentro del recinto?",
+    "expected": "No tengo esa información.",
+    "note": "Pregunta intencionalmente fuera del corpus para medir alucinación."
+  }
+]

@@ -1,0 +1,123 @@
+https://www.sciencedirect.com/special-issue/326025/joint-special-issue-call-for-papers-large-language-models-llms-for-tourism-and-tourists
+Skip to main content
+Brought to you by:Universidad de Murcia
+Elsevier logo
+
+    Journals & Books
+
+    Help
+    Search
+
+Aurora Gonzalez Vidal
+University of Murcia
+Call for papers
+Participating journals
+Information Processing & Management
+Information Processing & Management
+Supports open access
+
+    18.6CiteScore
+    6.9Impact Factor
+
+Annals of Tourism Research
+Annals of Tourism Research
+Supports open access
+
+    16.2CiteScore
+    7.8Impact Factor
+
+22 September 2025
+Joint Special Issue Call for Papers - Large Language Models (LLMs) for Tourism and Tourists
+Submission deadline: 31 August 2026
+
+Special Note: This is a joint Article Collection of Annals of Tourism Research and Information Processing & Management. Both journals have an interest in how LLMs can be used in the tourism context, assisting tourists, tourism businesses, and tourism destinations. Articles will be published in one of the journals. The Article Collection (entire set) will be posted on the websites of both journals, increasing exposure of the research for the authors.
+
+Guest editors:
+
+Yang Yang, Associate Editor, Annals of Tourism Research
+
+Sara Dolnicar, Editor-in-Chief, Annals of Tourism Research
+
+Jim Jansen, Editor-in-Chief, Information Processing & Management
+
+Special issue information:
+
+Large Language Models (LLMs) and Generative AI (GenAI) are changing how tourists are inspired to travel, how they search for tourism-related information, where they book travel-related services, and how they plan their itineraries. LLMs are changing how tourism businesses assess guest satisfaction, how they determine their brand image, and how they can save money by delegating routine operational tasks to LLMs. LLMs are also changing how tourism destinations monitor consumer sentiment and how they develop marketing campaigns. As LLMs inevitably become more powerful and refined, the number of applications in tourism will skyrocket.
+
+Annals of Tourism Research and Information Processing & Management have already published several articles investigating the use of LLMs in tourism or leveraging the power of LLMs as a tool for tourism research, including.:
+
+    Mikulić, J. (2025). Large language models in tourism research: Support, substitution, or something else?. Annals of Tourism Research, 114, 104003.
+
+    Ali, F. (2025). Rethinking synthetic data in tourism research: Ethical risks, epistemic shifts, and the RSDU-T framework. Annals of Tourism Research, 114, 104009.
+
+    Ramrakhiyani, N., Varma, V., Palshikar, G. K., & Pawar, S. (2025). Gauging, enriching and applying geography knowledge in Pre-trained Language Models. Information Processing & Management, 62(1), 103892.
+
+    Shrestha, R. K., Whitford, M., & Zhang, J. (2025). Tourism and social representations of Sherpas from Nepal. Annals of Tourism Research, 113, 103981.
+
+    Hsu, C. H., Tan, G., & Stantic, B. (2024). A fine-tuned tourism-specific generative AI concept. Annals of Tourism Research, 104, 103723.
+
+    Fan, Z., & Chen, C. (2024). CuPe-KG: Cultural perspective–based knowledge graph construction of tourism resources via pretrained language models. Information Processing & Management, 61(3), 103646.
+
+This joint article collection builds on this work and aims to identify areas where LLMs can be ethically deployed to assist tourists, tourism businesses, and tourist destinations. Additionally, the joint collection aims to develop purpose-built LLMs for specific challenges. The collection is also open to articles that discuss the implications of increased LLM adoption in the tourism sector.
+
+The strength of this joint Article Collection is that expert reviewers from both information technology and tourism are available to assess contributions, thus speeding up focused knowledge development and ensuring that the bodies of literature in tourism and information technology do not develop in parallel, but rather benefit from cross-fertilisation.
+
+Possible topics of submissions:
+
+    Generative AI for Smart Tourism Experiences: Exploring how LLMs can personalize itineraries, provide real-time guidance, and adapt recommendations to tourists’ preferences
+
+    Conversational Agents in Hospitality: The role of LLM-powered chatbots in hotels, airlines, and travel agencies for customer service and engagement
+
+    Multilingualism and Accessibility in Tourism: Leveraging LLMs for translation, cross-cultural communication, and inclusion of diverse traveler groups
+
+    LLMs and Destination Marketing: How generative AI can create compelling narratives, promotional content, and social media engagement for destinations
+
+    Ethics, Trust, and Transparency in AI-driven Tourism: Addressing concerns of bias, misinformation, and trustworthiness when deploying LLMs in travel contexts
+
+    Tourism Education and Training with LLMs: Using AI tutors and assistants to support tourism and hospitality management students and professionals
+
+    Data-Driven Insights from Tourist Interactions: Using LLMs to analyze feedback, reviews, and online conversations for destination management and policy making
+
+    Cultural Heritage and Storytelling through LLMs: Reimagining museum guides, historical tours, and immersive cultural experiences using generative AI
+
+    Sustainability and Responsible Tourism with LLMs: AI-enabled nudges and dialogue systems to promote eco-friendly travel behaviors and sustainable tourism development
+
+    Future of Work in Tourism with Generative AI: How LLMs reshape roles of travel agents, tour guides, and hospitality staff, balancing automation with human expertise
+
+Manuscript submission information:
+
+Important dates:
+
+    Submissions Open: 10 September 2025
+
+    Submissions Close: 31 August 2026
+
+Submission Guidelines for Authors:
+
+Select one of the journals to submit your article
+
+    For Information Processing & Management: Submit your manuscript by selecting the article type ‘VSI: LLMTourism’ through the online submission system of Information Processing & Management. All the submissions should follow the general author guidelines of Information Processing & Management.
+
+    For Annals of Tourism Research: Submit your manuscript by selecting the article type ‘VSI: LLMTourism’ through the online submission system of Annals of Tourism Research. All the submissions should follow the general author guidelines of Annals of Tourism Research.
+
+Keywords:
+
+LLM, Large Language Models, AI, ChatGPT
+
+Check out the FAQs on special issues.
+
+Learn more about the benefits of publishing in a special issue.
+
+Interested in becoming a guest editor? Discover the benefits of guest editing a special issue and the valuable contribution that you can make to your field.
+Elsevier logo with wordmark
+
+    About ScienceDirect
+    Remote access
+    Contact and support
+    Terms and conditions
+    Privacy policy
+    Cookie settings
+
+All content on this site: Copyright © 2026 Elsevier B.V., its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the relevant licensing terms apply.
+RELX group home page
+

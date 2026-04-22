@@ -1,0 +1,21 @@
+# Core ML / LLM
+torch>=2.2.0
+transformers>=4.40.0
+huggingface_hub>=0.23.0
+sentence-transformers>=3.0.0
+
+# LangChain stack
+langchain>=0.2.0
+langchain-community>=0.2.0
+langchain-huggingface>=0.1.0
+langchain-text-splitters>=0.2.0
+
+# Vector store
+chromadb>=0.5.0
+
+# Production app
+gradio>=4.0.0
+requests>=2.31.0
+
+# Jupyter kernel
+ipykernel>=6.29.0

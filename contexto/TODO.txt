@@ -1,0 +1,121 @@
+1. Resumen del enfoque de esta parte de la tesis, conectado con lo anterior y con el special issue
+
+Busco ahora conectar la parte aplicada con lo que ya he venido desarrollando antes en la tesis sobre smart festivals, personalización, inmersión y lealtad. Hasta ahora, el enfoque había sido más conceptual, centrado en cómo las tecnologías inteligentes pueden aportar valor en el contexto del festival. Esta nueva fase sería el paso aplicado: diseñar y evaluar un asistente LLM para festivales que traduzca esa lógica en una herramienta concreta para el usuario.
+
+En ese sentido, lo veo como una continuación natural de lo anterior: pasar de explicar teóricamente cómo la tecnología puede mejorar la experiencia del asistente a construir un sistema que realmente ayude en un festival concreto, en este caso el Warm Up de Murcia.
+
+La propuesta estaría centrada en cómo un LLM puede apoyar al usuario antes, durante y después del evento mediante información, recomendación y ayuda contextual.
+
+2. Material que ya tengo extraído de la web del festival
+
+De momento ya he empezado a construir el corpus base con material procedente de la web oficial del Warm Up, pero me queda bastante por hacer... He descargado y organizado información vinculada al festival y también he empezado a generar archivos con biografías de artistas.
+
+La alumna interna me está ayudando a recopilar parte de esta información y, además, he preparado un script para ir descargando y organizando el contenido en formato TXT, de manera que luego pueda utilizarse directamente en el corpus del asistente.
+
+Por ahora tengo:
+
+    Contenido de la web oficial del Warm Up,
+
+    Biografías de artistas
+
+    Estructura de carpetas y archivos TXT para seguir ampliando el dataset de forma ordenada.
+
+
+
+
+     festival_txts
+
+3. Fuentes adicionales que propongo incorporar
+
+Mi idea es que el corpus no se limite solo a la información del festival, sino que combine también datos turísticos y operativos útiles para que el asistente pueda responder de forma más completa.
+
+Las fuentes adicionales que propongo son:
+
+    Alojamiento: hoteles y hospedajes en Murcia, con nombres, descripciones y ubicaciones.
+
+    Restaurantes: opciones gastronómicas en Murcia, con nombres, especialidades y horarios.
+
+    Gastronomía regional: platos típicos de Murcia, ingredientes e información cultural básica.
+
+    Planes y actividades: qué hacer en Murcia durante los días del festival, incluyendo agenda, playas, visitas y experiencias.
+
+    Historia del festival: antecedentes, evolución y ediciones anteriores.
+
+    Historia de Murcia ciudad: patrimonio, tradiciones y elementos culturales relevantes.
+
+    Información general sobre la Región de Murcia: datos generales del destino.
+
+    Información útil: transporte, servicios, emergencias, trenes, taxis, hospitales, etc.
+
+    Merchandising: productos oficiales del festival.
+
+Creo que esta ampliación es importante porque permitiría que el asistente no solo responda preguntas sobre el recinto o el cartel, sino también sobre cómo organizar el viaje, dónde dormir, cómo moverse, qué hacer en Murcia y cómo complementar la experiencia del festival con actividades turísticas. Lo dicho, aquí tengo trabajo ¿Tú como lo ves así?
+
+4. Casos de uso del asistente
+
+Estoy pensando los casos de uso del asistente en tres momentos:
+
+PRE FESTIVAL
+Aquí el asistente ayudaría con planificación y organización previa. Por ejemplo:
+
+    Dónde alojarse
+
+    Cómo llegar al festival
+
+    Qué artistas actúan y en qué días
+
+    Qué hacer en Murcia durante esos días,
+
+    Dónde comer
+
+    Información práctica para preparar el viaje
+
+DURANTE
+Aquí tendría un papel más operativo e inmediato. Por ejemplo:
+
+    Dudas sobre accesos, horarios o normativa
+
+    Transporte hacia o desde el recinto
+
+    Recomendaciones rápidas de restauración o servicios cercanos
+
+    Orientación práctica dentro del contexto del evento
+
+    Ayuda contextual para tomar decisiones rápidas
+
+POST
+Aquí podría servir para prolongar la experiencia y conectar el evento con el destino. Por ejemplo:
+
+    Recomendaciones de planes para seguir en Murcia después del festival
+
+    Información adicional sobre gastronomía, patrimonio o visita
+
+    Consulta de merchandising o contenidos vinculados al evento
+
+    Apoyo para reforzar la relación del usuario con el festival y el destino
+
+La idea general es que el asistente actúe como una herramienta de apoyo informativo, recomendador y orientador a lo largo de toda la experiencia del asistente.
+
+5. Propuesta de evaluación metodológica del LLM
+
+A nivel metodológico, estoy pensando en una evaluación en dos fases.
+
+Primero, una fase más técnica con un pequeño dataset sintético de preguntas y respuestas, para comprobar cómo funciona el sistema en tareas de información y recomendación. Aquí se podrían evaluar cuestiones como precisión, relevancia, claridad y utilidad de la respuesta. ¿Qué opinas de esto? En el artículo de Lisboa lo hacían así.
+
+Después, una fase más cualitativa o aplicada con usuarios y/o expertos, para valorar el asistente en dimensiones como:
+
+    Calidad de la información
+
+    Calidad de la recomendación
+
+    Utilidad operativa
+
+    Claridad de las respuestas
+
+    Aatisfacción general con el asistente
+
+La idea sería ver no solo si responde correctamente, sino si realmente resulta útil en contextos reales de uso vinculados al festival.
+
+Ahora mismo me interesaba sobre todo compartiros este planteamiento general para saber si os parece bien orientado o si creéis que debería reorganizar algo antes de seguir avanzando con la construcción del corpus y el diseño de la evaluación...
+
+La tesis pasa de explicar teóricamente cómo las tecnologías inteligentes generan personalización, inmersión y lealtad en festivales, a diseñar y evaluar un asistente LLM concreto que operacionaliza esa lógica en el caso del Warm Up, integrando información del festival, del destino y de la operativa turística.
