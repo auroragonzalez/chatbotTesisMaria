@@ -99,11 +99,12 @@ def ensure_model_downloaded(model_name: str) -> None:
 
 
 # Lista de festivales detectada automáticamente desde festival_txts/
-FESTIVALS = (
-    sorted(d.name for d in DATA_DIR.iterdir() if d.is_dir())
-    if DATA_DIR.exists()
-    else ["warm_up"]
-)
+def get_festivals():
+    """Devuelve la lista de festivales disponibles en tiempo de ejecución."""
+    if DATA_DIR.exists() and DATA_DIR.is_dir():
+        festivals = sorted(d.name for d in DATA_DIR.iterdir() if d.is_dir())
+        return festivals if festivals else ["warm_up"]
+    return ["warm_up"]
 
 
 # ─────────────────────────────────────────────
@@ -298,12 +299,16 @@ with gr.Blocks(title="FestGPT") as demo:
         "Asistente inteligente para festivales de música · powered by RAG + open-source LLM"
     )
 
+    # Cargar festivales en tiempo de ejecución
+    festivals_available = get_festivals()
+
     with gr.Row():
         festival_selector = gr.Dropdown(
-            choices=FESTIVALS,
-            value=FESTIVALS[0] if FESTIVALS else "warm_up",
+            choices=festivals_available,
+            value=festivals_available[0] if festivals_available else "warm_up",
             label="Festival",
             scale=1,
+            interactive=True,
         )
         phase_selector = gr.Radio(
             choices=list(PHASE_PROMPTS.keys()),
@@ -349,7 +354,7 @@ if __name__ == "__main__":
         sys.exit(0)
 
     if args.ingest:
-        targets = [args.festival] if args.festival else FESTIVALS
+        targets = [args.festival] if args.festival else get_festivals()
         if not targets:
             print("No se encontraron carpetas de festival en", DATA_DIR)
             sys.exit(1)
