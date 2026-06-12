@@ -42,7 +42,7 @@ from huggingface_hub import snapshot_download
 from huggingface_hub.errors import LocalEntryNotFoundError
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
-from langchain_community.document_loaders import DirectoryLoader
+from langchain_community.document_loaders import DirectoryLoader, TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 
@@ -52,8 +52,8 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 os.environ["CUDA_VISIBLE_DEVICES"] = os.getenv("CUDA_VISIBLE_DEVICES", "0")
 
-VLLM_URL         = os.getenv("VLLM_URL",         "http://localhost:8000/v1/completions")
-MODEL_NAME       = os.getenv("MODEL_NAME",        "microsoft/Phi-3-mini-4k-instruct")
+LLM_URL          = os.getenv("LLM_URL",          os.getenv("VLLM_URL",         "http://localhost:11434/v1/chat/completions"))
+MODEL_NAME       = os.getenv("MODEL_NAME",        os.getenv("MODEL_NAME",        "phi3:mini"))
 EMBEDDING_MODEL  = os.getenv("EMBEDDING_MODEL",   "intfloat/multilingual-e5-base")
 EMBEDDING_DEVICE = os.getenv("EMBEDDING_DEVICE",  "cuda")
 CHROMA_DIR       = Path(os.getenv("CHROMA_DIR",   "./chroma_db"))
@@ -65,6 +65,7 @@ MAX_TOKENS       = int(os.getenv("MAX_TOKENS",    "512"))
 TEMPERATURE      = float(os.getenv("TEMPERATURE", "0.3"))
 SERVER_PORT      = int(os.getenv("SERVER_PORT",   "7860"))
 HF_TOKEN         = os.getenv("HF_TOKEN",          None)
+LLM_API_KEY      = os.getenv("LLM_API_KEY",       os.getenv("OLLAMA_API_KEY", None))
 
 # ─────────────────────────────────────────────
 # MODEL DOWNLOAD
@@ -140,10 +141,12 @@ SYSTEM_BASE = (
 # EMBEDDINGS (singleton; se carga una sola vez)
 # ─────────────────────────────────────────────
 
+print("[startup] Loading embedding model...", flush=True)
 embedding_model = HuggingFaceEmbeddings(
     model_name=EMBEDDING_MODEL,
     model_kwargs={"device": EMBEDDING_DEVICE},
 )
+print("[startup] Embedding model loaded ✓", flush=True)
 
 
 # ─────────────────────────────────────────────
@@ -161,7 +164,13 @@ def ingest_corpus(festival: str) -> None:
         raise FileNotFoundError(f"No existe la carpeta de corpus: {source_dir.resolve()}")
 
     print(f"[ingest:{festival}] Cargando documentos desde {source_dir} ...")
-    loader = DirectoryLoader(str(source_dir), glob="**/*.txt", show_progress=True)
+    loader = DirectoryLoader(
+        str(source_dir),
+        glob="**/*.txt",
+        loader_cls=TextLoader,
+        loader_kwargs={"encoding": "utf-8"},
+        show_progress=True,
+    )
     docs = loader.load()
     print(f"[ingest:{festival}] Documentos cargados: {len(docs)}")
 
@@ -228,22 +237,35 @@ def build_prompt(context: str, question: str, phase: str) -> str:
 
 def generate_stream(prompt: str):
     """
-    Llama al endpoint vLLM con streaming SSE y devuelve fragmentos de texto.
-    Parsea correctamente el formato: data: {"choices": [{"text": "..."}]}
+    Llama al endpoint LLM (Ollama/OpenAI-compatible) con streaming SSE.
+    Soporta tanto /v1/completions (vLLM) como /v1/chat/completions (Ollama).
     """
+    url = LLM_URL
+    is_chat_api = "/chat/completions" in url
+
+    if is_chat_api:
+        payload = {
+            "model": MODEL_NAME,
+            "messages": [{"role": "user", "content": prompt}],
+            "max_tokens": MAX_TOKENS,
+            "temperature": TEMPERATURE,
+            "stream": True,
+        }
+    else:
+        payload = {
+            "model": MODEL_NAME,
+            "prompt": prompt,
+            "max_tokens": MAX_TOKENS,
+            "temperature": TEMPERATURE,
+            "stream": True,
+        }
+
+    headers = {}
+    if LLM_API_KEY:
+        headers["Authorization"] = f"Bearer {LLM_API_KEY}"
+
     try:
-        response = requests.post(
-            VLLM_URL,
-            json={
-                "model": MODEL_NAME,
-                "prompt": prompt,
-                "max_tokens": MAX_TOKENS,
-                "temperature": TEMPERATURE,
-                "stream": True,
-            },
-            stream=True,
-            timeout=60,
-        )
+        response = requests.post(url, json=payload, headers=headers, stream=True, timeout=120)
         response.raise_for_status()
     except requests.exceptions.RequestException as e:
         yield f"[Error de conexión con el modelo: {e}]"
@@ -255,12 +277,16 @@ def generate_stream(prompt: str):
         decoded = raw_line.decode("utf-8")
         if not decoded.startswith("data:"):
             continue
-        payload = decoded[len("data:"):].strip()
-        if payload == "[DONE]":
+        data_str = decoded[len("data:"):].strip()
+        if data_str == "[DONE]":
             break
         try:
-            data = json.loads(payload)
-            text = data["choices"][0].get("text", "")
+            data = json.loads(data_str)
+            if is_chat_api:
+                delta = data["choices"][0].get("delta", {})
+                text = delta.get("content", "")
+            else:
+                text = data["choices"][0].get("text", "")
             if text:
                 yield text
         except (json.JSONDecodeError, KeyError, IndexError):
@@ -363,4 +389,5 @@ if __name__ == "__main__":
         print("\nIngestión completada. Lanza el chatbot con: python app.py")
         sys.exit(0)
 
+    print("[startup] Building Gradio UI...")
     demo.launch(server_name="0.0.0.0", server_port=SERVER_PORT)

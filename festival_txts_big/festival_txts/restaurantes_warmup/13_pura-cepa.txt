@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Pura Cepa
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Plaza Cristo del Rescate, 8, 30001 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Gastronomía Murciana con un toque especial junto al a la Iglesia de San Juan. Dispone de terraza, barra tipica murciana, salones y bodega de vinos seleccionados.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 96 21 73 97
+Email: No disponible
+Web oficial: http://www.puracepamurcia.com/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

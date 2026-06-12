@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Pistatxo
+[CUISINE_TYPE]: INTERNACIONAL
+[ADDRESS]: Calle Alfaro, 12, 30001 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Restaurante de cocina vegetariana.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 968 11 77 45
+Email: No disponible
+Web oficial: https://www.facebook.com/pistatxovegetariano/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; útil si se busca cocina internacional

@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Salzillo
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Plaza del Calle Cánovas del Castillo, 28, 30003 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Restaurante ubicado en el Barrio de Santa Eulalia especializado en la gastronomía murciana. Amplia gama de productos para recorrer desde la oferta de nuestras costas, las verduras de nuestra tierra hasta las carnes autóctonas.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 968 22 01 94
+Email: No disponible
+Web oficial: http://restaurantesalzillo.com/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: CUCU Gastro Bar
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Calle Marengo, 6, 30001 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Las mejores tortillas de Patatas Gourmet de Murcia, eventos Privados, catering, carnes a la Brasa, tapas y cervezas en el barrio de Santa Eulalia.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 868 911 078
+Email: No disponible
+Web oficial: No disponible
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

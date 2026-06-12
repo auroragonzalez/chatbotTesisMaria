@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: HOTEL UNIVERSAL MURCIA
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Centro de Murcia
+[ADDRESS]: Calle Cartagena, 21 - 30002 - Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+En el centro histórico y comercial de Murcia, el Hotel Universal Murcia pone a su servicio 47 habitaciones confortables, completamente reformadas, con baño interior, climatización, teléfono, televisión y Wifi gratuito de alta velocidad. Habitaciones funcionales para conseguir un descanso placentero.
+
+=== CONTACTO ===
+Teléfono: +34 968 217 605
+Email: No disponible
+Web oficial / reserva: https://universal-pacoche.es/
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+en Murcia ciudad; cerca del centro; camping/albergue

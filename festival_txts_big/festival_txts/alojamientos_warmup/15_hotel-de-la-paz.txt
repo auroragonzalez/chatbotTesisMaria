@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: HOTEL DE LA PAZ
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Sangonera La Seca
+[ADDRESS]: Ctra. Granada, Km. 647 - 30835 - Sangonera La Seca - Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+Si buscas alojamiento para descansar o visitar Murcia ¡El Hotel La Paz es lo que necesitas! Está situado en una zona tranquila en el km581, su rápido acceso a la ciudad te facilita ir de compras o pasear por las diferentes localidades que se encuentran a escasa distancia. Habitaciones equipadas con todo lo que necesitas para tu estancia.
+
+=== CONTACTO ===
+Teléfono: +34 968 801 337
+Email: No disponible
+Web oficial / reserva: http://hoteldelapaz.es/
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+bien conectado; camping/albergue

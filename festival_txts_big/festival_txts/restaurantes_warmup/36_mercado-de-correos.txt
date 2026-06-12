@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Mercado de Correos
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Calle Pintor Villacis, 3, 30003 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+No disponible
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 680 877 640
+Email: No disponible
+Web oficial: https://mercadodecorreos.com/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

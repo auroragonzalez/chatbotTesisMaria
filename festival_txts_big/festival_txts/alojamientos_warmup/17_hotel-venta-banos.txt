@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: HOTEL VENTA BAÑOS
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Murcia y alrededores
+[ADDRESS]: Autovía de noroeste, Salida 8 (Venta Baños) - 30837 - Cañada Hermosa (Murcia)
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+El Hotel Venta Baños cuenta con unas excelentes instalaciones que combinan la tradicional arquitectura de antaño, con formas de construcción modernas, todos los elementos que contiene son de carácter práctico y funcional. Comprende veintitrés habitaciones y dos Junior Suites.
+
+=== CONTACTO ===
+Teléfono: +34 868 175 444
+Email: No disponible
+Web oficial / reserva: http://www.ventabanos.com/
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+camping/albergue

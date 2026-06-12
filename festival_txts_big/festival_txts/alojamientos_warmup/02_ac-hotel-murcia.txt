@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: AC HOTEL MURCIA
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Centro de Murcia
+[ADDRESS]: Juan Carlos I, 39 - 30009 - Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+El AC Hotel Murcia está ubicado a tan solo 2,5 km del centro de Murcia en la zona empresarial más importante de la ciudad estando conectado con el centro como con el resto de la periferia en tan solo unos minutos gracias a la nueva línea del tranvía. Es un hotel funcional y de diseño vanguardista.
+
+=== CONTACTO ===
+Teléfono: +34 968 274 250
+Email: No disponible
+Web oficial / reserva: http://www.espanol.marriott.com/hotels/travel/mjvmu-ac-hotel-murcia
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+en Murcia ciudad; cerca del centro; bien conectado; camping/albergue

@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: La Bien Pagá
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Calle Sociedad, 1. 30004 Murcia.
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+De Carmen Santana. La proximidad al Mercado de Verónicas ofrece al equipo de cocina la posibilidad de trabajar con productos frescos de primera calidad traídos del mercado cada día.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 968 932 626
+Email: No disponible
+Web oficial: No disponible
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

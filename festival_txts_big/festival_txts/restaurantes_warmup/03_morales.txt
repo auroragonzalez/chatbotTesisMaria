@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Morales
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Av. de la Constitución, 12, 30008 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Un clasico de la cocina murciana. Gastronomía mediterránea y de mercado. Todas las materias primas son de primera calidad, añadiendo un servicio y atención al cliente excelente. 1 Sol Repsol
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 968 23 10 26
+Email: No disponible
+Web oficial: https://restaurantemorales.es/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

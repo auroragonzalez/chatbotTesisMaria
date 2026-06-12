@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: El Churra
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: C/ Obispo Sancho Dávila, 13, 30007 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Platos típicos de la región de Murcia, con poductos de la tierra, carnes, pescados, marisco…. Terraza con capacidad para 40 personas. 1 Sol Repsol
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 968 27 15 22
+Email: No disponible
+Web oficial: https://www.elchurra.net/restaurante
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

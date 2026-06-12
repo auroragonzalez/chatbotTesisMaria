@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: NH AMISTAD
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Centro de Murcia
+[ADDRESS]: Condestable, 1 - 30009 - Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+Moderno y funcional hotel de reciente construcción, situado en pleno centro de la Ciudad, junto a El Corte Inglés. Dispone de 148 habitaciones dotadas de toda clase de servicios y comodidades: Su restaurante "Condestable", especializado en cocina creativa e internacional, ofrece el mejor servicio y calidad.
+
+=== CONTACTO ===
+Teléfono: +34 968 282 929
+Email: No disponible
+Web oficial / reserva: https://www.nh-hoteles.es/hotel/nh-amistad-murcia
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+en Murcia ciudad; cerca del centro; camping/albergue

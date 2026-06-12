@@ -1,0 +1,9 @@
+[CATEGORY]: PLANES_Y_ACTIVIDADES
+[ACTIVITY]: Subir a la torre de la Catedral
+[URL]: No disponible
+
+=== TÍTULO DE LA PÁGINA ===
+Subir a la torre de la Catedral
+
+=== TEXTO ===
+Es el punto más alto de toda la ciudad. Desde él disfrutarás de unas vistas impresionantes. ¿Te apuntas?

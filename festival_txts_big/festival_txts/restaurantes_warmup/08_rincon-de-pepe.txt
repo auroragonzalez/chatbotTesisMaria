@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Rincón de Pepe
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Calle Apóstoles, 34, 30001 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Una cocina tradicional donde prima el buen saber hacer acompañado de productos de la tierra
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 610 99 99 99
+Email: No disponible
+Web oficial: https://www.restauranterincondepepe.com/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

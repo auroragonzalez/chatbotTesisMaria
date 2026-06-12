@@ -1,0 +1,29 @@
+name: chatbot-maria
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: chatbot-maria-app
+    container_name: chatbot-maria-app
+    restart: unless-stopped
+    ports:
+      - "7860:7860"
+    env_file:
+      - .env
+    volumes:
+      - ./chroma_db:/app/chroma_db
+      - ./festival_txts:/app/festival_txts:ro
+    environment:
+      PYTHONUNBUFFERED: "1"
+      EMBEDDING_DEVICE: cpu
+      SERVER_PORT: "7860"
+      CHROMA_DIR: /app/chroma_db
+      DATA_DIR: /app/festival_txts
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:7860/').read()\" || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

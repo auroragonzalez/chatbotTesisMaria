@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: La pequeña taberna
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Plaza San Juan, 7, 30003 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Platos típicos de la Región de Murcia y de la cuenca mediterránea. Carnes, pescados, mariscos y hortalizas de primera calidad se convierten en los verdaderos protagonistas de este local. Referente gastronómico de la capital murciana
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 968 21 98 40
+Email: No disponible
+Web oficial: https://www.lapequenataberna.com/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

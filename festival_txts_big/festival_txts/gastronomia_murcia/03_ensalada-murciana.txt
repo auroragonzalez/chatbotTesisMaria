@@ -1,0 +1,13 @@
+[CATEGORY]: PLATO_REGIONAL
+[NAME]: Ensalada Murciana
+[SOURCE_GASTRONOMIA]: https://www.turismodemurcia.es/es/gastronomia
+[SOURCE_RECIPE]: https://www.turismodemurcia.es/es/recetas-de-murcia
+
+=== INGREDIENTES ===
+No disponible
+
+=== ELABORACIÓN ===
+1 kg de tomate de bote 200 g de atún en aceite de oliva manojo de cebolla tierna huevos duros 100 g de olivas de cuquillo Aceite de oliva Sal En una fuente apropiada para ensalada se pone el tomate y la cebolla previamente cortada, se le añade la mitad de atún y la mitad de las olivas, sal al gusto y un chorro de aceite. Se mueve y se adorna la otra mitad de atún, las olivas restantes y el huevo duro partido en cuatro trozos. Para finalizar se le pone un chorrico de aceite para iluminar la ensalada murciana.
+
+=== CONTEXTO / HISTORIA ===
+Receta tradicional de la cocina murciana extraída de la página oficial de recetas de Turismo de Murcia. Forma parte del repertorio gastronómico regional vinculado a la huerta, los productos frescos, los arroces, las verduras, los pescados y la cocina popular murciana.

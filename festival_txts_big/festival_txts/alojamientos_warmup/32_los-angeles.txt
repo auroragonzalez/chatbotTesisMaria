@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: LOS ANGELES
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Murcia y alrededores
+[ADDRESS]: Avda. de Alicante - 30160 - Monteagudo - Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+ul class="list-inline"> <li><i class="fas fa-utensils iconhotel"></i></li> <li><i class="fas fa-wifi iconhotel"></i></li> </ul
+
+=== CONTACTO ===
+Teléfono: +34 968 242 766
+Email: No disponible
+Web oficial / reserva: http://www.apartamentos-amanecer.es/
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+camping/albergue

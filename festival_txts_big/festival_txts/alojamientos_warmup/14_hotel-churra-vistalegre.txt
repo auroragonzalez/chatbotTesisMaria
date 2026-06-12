@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: HOTEL CHURRA VISTALEGRE
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Centro de Murcia
+[ADDRESS]: Arquitecto Juan José Belmonte, 4 - 30007 - Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+El hotel Churra Vistalegre, se encuentra en el barrio de Vistalegre, en el lateral del Hospital Morales Meseguer, a 200 metros de la Plaza Circular, donde comienza el centro de Murcia, a 5 minutos andando de la zona comercial, y a 10 del casco antiguo de Murcia. Hotel de 57 habitaciones de larga tradición familiar.
+
+=== CONTACTO ===
+Teléfono: +34 968 201 750
+Email: No disponible
+Web oficial / reserva: https://www.elchurra.net/elchurra-hoteles/churra-vistalegre
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+en Murcia ciudad; cerca del centro; camping/albergue

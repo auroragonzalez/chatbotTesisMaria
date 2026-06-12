@@ -1,0 +1,6 @@
+[CATEGORY]: EXPERIENCIAS_TURISTICAS_RESUMEN
+[SOURCE]: https://www.turismodemurcia.es/es/experiencias-turisticas
+
+=== DESCRIPCIÓN GENERAL ===
+La página agrupa experiencias turísticas organizadas por bloques temáticos, con especial peso de las experiencias gastronómicas y de la huerta.
+Cada experiencia incluye descripción, requisitos, salidas, hora, punto de encuentro, duración, reservas, precio y datos de contacto.

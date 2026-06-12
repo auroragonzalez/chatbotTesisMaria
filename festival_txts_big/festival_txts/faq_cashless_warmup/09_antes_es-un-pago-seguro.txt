@@ -1,0 +1,9 @@
+[CATEGORY]: FAQ_CASHLESS
+[SECTION]: INFO ANTES DEL FESTIVAL
+[SOURCE]: https://warmupfestival.es/cashless/
+
+=== PREGUNTA ===
+¿Es un pago seguro?
+
+=== RESPUESTA ===
+¡Muchísimo! El pago a través de este sistema es muy seguro gracias a Caja Rural Central, se utiliza un cifrado de alta seguridad que es imposible de copiar la información y los datos.

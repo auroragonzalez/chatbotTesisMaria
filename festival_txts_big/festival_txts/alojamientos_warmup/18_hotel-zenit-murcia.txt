@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: HOTEL ZENIT MURCIA
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Centro de Murcia
+[ADDRESS]: Plaza de San Pedro, 5 - 30004 - Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+El Hotel Zenit Murcia está en el centro de Murcia, junto a la Plaza de las Flores. Su ubicación permite recorrer a pie las calles de esta ciudad y los principales atractivos culturales, gastronómicos y de ocio. Un hotel elegante y ajustado a sus necesidades, con una decoración muy agradable. Hay 61 habitaciones completamente equipadas.
+
+=== CONTACTO ===
+Teléfono: +34 968 214 741
+Email: No disponible
+Web oficial / reserva: https://murcia.zenithoteles.com/es/
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+en Murcia ciudad; cerca del centro; camping/albergue

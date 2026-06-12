@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: CASA PANCHO
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Murcia y alrededores
+[ADDRESS]: Av. de Lorca, 152 - 30835 - Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+No disponible
+
+=== CONTACTO ===
+Teléfono: +34 968 803 787
+Email: No disponible
+Web oficial / reserva: http://idearent.es/
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+camping/albergue

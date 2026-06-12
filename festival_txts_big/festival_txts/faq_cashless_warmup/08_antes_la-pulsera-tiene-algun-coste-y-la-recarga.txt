@@ -1,0 +1,9 @@
+[CATEGORY]: FAQ_CASHLESS
+[SECTION]: INFO ANTES DEL FESTIVAL
+[SOURCE]: https://warmupfestival.es/cashless/
+
+=== PREGUNTA ===
+¿La pulsera tiene algún coste?, ¿y la recarga?
+
+=== RESPUESTA ===
+La pulsera y la gestión de la recarga es totalmente gratuita y no lleva asociado ningún gasto de gestión.

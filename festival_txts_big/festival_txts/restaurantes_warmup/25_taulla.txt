@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Taulla
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Calle Antonio Flores Guillamón, 2, 30100 Espinardo, Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Del Chef Julio Velandrino. El Restaurante Taúlla de Julio Velandrino es la cocina murciana evolucionada con las esencias del resto del mundo.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 868 07 99 80
+Email: No disponible
+Web oficial: https://www.taulla.es/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+buena opción para cocina murciana

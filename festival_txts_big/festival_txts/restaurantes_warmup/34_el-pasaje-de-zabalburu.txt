@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: El Pasaje de Zabalburu
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Plaza San Pedro, 3, 30004 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Moderna cervecería con terraza exterior que sirve tapas, pintxos y platos de cocina murciana actualizada.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 622 622 167
+Email: No disponible
+Web oficial: https://pasajedezabalburu.com/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

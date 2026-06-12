@@ -1,11 +1,17 @@
 """
 FestGPT — Evaluación comparativa de modelos LLM
 ================================================
-Ejecutar:
-    python eval/run_eval.py                          # evalúa el modelo configurado en app.py
-    python eval/run_eval.py --models phi3 salamandra mistral  # compara varios modelos
+Llama al mismo endpoint que la app (LLM_URL): detecta automáticamente
+formato chat (/v1/chat/completions, Ollama Cloud/OpenAI) o completions (vLLM).
+El nombre de modelo se envía tal cual al endpoint; los alias de abajo son
+atajos opcionales que se expanden a nombres HuggingFace (útiles con vLLM).
 
-Modelos disponibles (alias → nombre HuggingFace):
+Ejecutar:
+    python eval/run_eval.py                          # evalúa MODEL_NAME (config de app.py)
+    python eval/run_eval.py --models gemma3:27b-cloud
+    python eval/run_eval.py --models phi3 salamandra mistral  # compara varios (vLLM)
+
+Alias opcionales (alias → nombre HuggingFace, para backends vLLM):
     phi3        microsoft/Phi-3-mini-4k-instruct
     salamandra  BSC-LT/salamandra-7b-instruct
     mistral     mistralai/Mistral-7B-Instruct-v0.3
@@ -36,7 +42,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from app import (
     CHROMA_DIR, EMBEDDING_MODEL, EMBEDDING_DEVICE,
-    RETRIEVER_K, TEMPERATURE, VLLM_URL,
+    RETRIEVER_K, TEMPERATURE, LLM_URL, LLM_API_KEY, MODEL_NAME,
     embedding_model, get_context, build_prompt, PHASE_PROMPTS,
 )
 
@@ -99,29 +105,46 @@ def hallucination_rate(answers: list[str], expected_no_info: list[bool]) -> floa
 
 
 # ─────────────────────────────────────────────
-# GENERACIÓN (llamada al vLLM con el modelo activo)
+# GENERACIÓN (llamada al endpoint LLM con el modelo activo)
 # ─────────────────────────────────────────────
 
 def generate_answer(question: str, phase: str, model_name: str, max_tokens: int = 256) -> tuple[str, float]:
-    """Llama al endpoint vLLM y devuelve (respuesta, latencia_segundos)."""
+    """
+    Llama al endpoint LLM (LLM_URL) y devuelve (respuesta, latencia_segundos).
+    Detecta el formato igual que app.generate_stream: /v1/chat/completions
+    (Ollama/OpenAI) vs /v1/completions (vLLM), sin streaming.
+    """
     context = get_context(question, FESTIVAL)
     prompt  = build_prompt(context, question, phase)
 
+    is_chat_api = "/chat/completions" in LLM_URL
+    if is_chat_api:
+        payload = {
+            "model": model_name,
+            "messages": [{"role": "user", "content": prompt}],
+            "max_tokens": max_tokens,
+            "temperature": TEMPERATURE,
+            "stream": False,
+        }
+    else:
+        payload = {
+            "model": model_name,
+            "prompt": prompt,
+            "max_tokens": max_tokens,
+            "temperature": TEMPERATURE,
+            "stream": False,
+        }
+
+    headers = {}
+    if LLM_API_KEY:
+        headers["Authorization"] = f"Bearer {LLM_API_KEY}"
+
     t0 = time.time()
     try:
-        resp = requests.post(
-            VLLM_URL,
-            json={
-                "model": model_name,
-                "prompt": prompt,
-                "max_tokens": max_tokens,
-                "temperature": TEMPERATURE,
-                "stream": False,
-            },
-            timeout=120,
-        )
+        resp = requests.post(LLM_URL, json=payload, headers=headers, timeout=120)
         resp.raise_for_status()
-        answer = resp.json()["choices"][0]["text"].strip()
+        choice = resp.json()["choices"][0]
+        answer = (choice["message"]["content"] if is_chat_api else choice["text"]).strip()
     except Exception as e:
         answer = f"[ERROR: {e}]"
     latency = time.time() - t0
@@ -250,8 +273,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "--models",
         nargs="+",
-        default=["phi3"],
-        help=f"Alias de modelos a evaluar. Disponibles: {', '.join(MODEL_ALIASES)}",
+        default=[MODEL_NAME],
+        help=f"Modelos a evaluar (nombre directo o alias). Alias disponibles: {', '.join(MODEL_ALIASES)}",
     )
     args = parser.parse_args()
     run_evaluation(args.models)

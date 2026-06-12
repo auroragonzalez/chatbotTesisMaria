@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Arrozante
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Rda. de Garay, 30003 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Arrozante, la Casa del Arroz,para todos aquellos amantes del arroz. Los comensales pueden deleitarse con una exquisita variedad de platos de arroz que capturan la esencia de Murcia, combinando a la perfección la tradición local con las creaciones más innovadoras.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 968 22 00 63
+Email: No disponible
+Web oficial: http://www.barcelo.com/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

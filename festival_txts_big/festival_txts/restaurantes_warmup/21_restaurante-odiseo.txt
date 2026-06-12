@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Restaurante Odiseo
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Av. Juan de Borbón, 224, 30110 Churra, Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Chef Nazario Cano. Cocina de origen mediterráneo reinventada y creativa en un espacio singular.1 estrellas Michelin
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 649 222 222
+Email: No disponible
+Web oficial: https://odiseospain.com/gastro/restaurante/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+buena opción para cocina murciana

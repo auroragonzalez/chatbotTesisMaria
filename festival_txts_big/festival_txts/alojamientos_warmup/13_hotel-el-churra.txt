@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: HOTEL EL CHURRA
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Centro de Murcia
+[ADDRESS]: Marqués de los Vélez, 12 - 30008 - Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+Hotel céntrico, situado en el barrio de Vistalegre, junto a la Plaza Circular. Con acceso directo a la Universidad y a los Centros Comerciales a través del tranvía cuya parada se encuentra junto al hotel. Nuestro hotel dispone de 120 habitaciones, con habitaciones de distintas modalidades.
+
+=== CONTACTO ===
+Teléfono: +34 968 238 400
+Email: No disponible
+Web oficial / reserva: https://www.elchurra.net/
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+en Murcia ciudad; cerca del centro; bien conectado; camping/albergue

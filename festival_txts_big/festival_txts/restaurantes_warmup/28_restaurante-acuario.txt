@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Restaurante Acuario
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Plaza Puxmarina 1 , 30004 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Chef Daniel Marcos. Cocina moderna y de autor en pleno centro de Murcia. Técnica y creatividad en cada plato, con las mejores materias primas de la región.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 968 21 99 55
+Email: No disponible
+Web oficial: http://www.torremolinosrestaurante.com/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

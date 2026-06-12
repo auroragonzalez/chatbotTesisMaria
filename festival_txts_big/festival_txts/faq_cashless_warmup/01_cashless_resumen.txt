@@ -1,0 +1,10 @@
+[CATEGORY]: FAQ_CASHLESS_RESUMEN
+[SOURCE]: https://warmupfestival.es/cashless/
+
+=== ESTRUCTURA GENERAL ===
+La página de cashless se organiza en tres bloques: antes del festival, durante el festival y después del festival.
+Incluye preguntas sobre pulsera, entrada de día, recargas, pagos en el recinto, incidencias, saldo sobrante y reembolsos.
+
+=== CONTACTO ===
+info@warmupfestival.es
+cashless@idasfest.es

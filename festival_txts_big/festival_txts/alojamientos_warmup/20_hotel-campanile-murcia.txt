@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: HOTEL CAMPANILE MURCIA
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Zona bien conectada / tranvía
+[ADDRESS]: Avda. Juan Carlos I, 77 - 30100 - Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+Moderno y funcional, cuenta con 117 habitaciones con todo el confort: climatización, bandeja de cortesía con café y té, TV con canales internacionales, teléfono, mesa de trabajo, baño completo y Wifi gratuito en todo el Hotel. Dispone también de habitaciones para no fumadores y para discapacitados.
+
+=== CONTACTO ===
+Teléfono: +34 968 899 781
+Email: No disponible
+Web oficial / reserva: https://murcia.campanile.com/es-es/
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+bien conectado; camping/albergue

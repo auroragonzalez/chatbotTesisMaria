@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: HOTEL IBIS BUDGET HUERTA DE MURCIA
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Murcia y alrededores
+[ADDRESS]: Avda. José Manuel Sánchez Pedreño, 6 30009 - Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+El hotel cuenta con unas modernas instalaciones para el mejor descanso. Todas sus habitaciones están diseñadas para el máximo confort gracias a la cama Sweet Bed. Equipadas con cuarto de baño completo, aire acondicionado, calefacción, TV con canales nacionales e internacionales.
+
+=== CONTACTO ===
+Teléfono: Avda. José Manuel Sánchez Pedreño, 6 30009 - Murcia
+Email: No disponible
+Web oficial / reserva: https://all.accor.com/hotel/A9N5/index.es.shtml
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+camping/albergue

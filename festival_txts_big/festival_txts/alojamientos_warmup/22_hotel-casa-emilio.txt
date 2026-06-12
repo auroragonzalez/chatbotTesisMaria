@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: HOTEL CASA EMILIO
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Centro de Murcia
+[ADDRESS]: Calle Alameda de Colon, 9 - 30002 - Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+Este establecimiento está situado en el centro histórico y comercial de Murcia, frente a los jardines de Floridablanca, a 5 minutos de las estaciones de Tren y Autobuses. Este hotel de 2 estrellas es moderno y cuenta con habitaciones sencillas y cómodas. Su ubicación es ideal para descubrir el centro de la ciudad.
+
+=== CONTACTO ===
+Teléfono: +34 968 220 631
+Email: No disponible
+Web oficial / reserva: http://www.hotelcasaemilio.com/
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+en Murcia ciudad; cerca del centro; bien conectado; camping/albergue

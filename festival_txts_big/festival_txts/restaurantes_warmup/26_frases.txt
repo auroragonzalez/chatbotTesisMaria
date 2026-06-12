@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Frases
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Calle Soledad, 1, BAJO, 30003 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+De María Egea y Marco Antonio Iniesta. Restaurante gastronómico de cocina de autor.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 697 91 44 92
+Email: No disponible
+Web oficial: https://www.facebook.com/Restaurantefrases/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

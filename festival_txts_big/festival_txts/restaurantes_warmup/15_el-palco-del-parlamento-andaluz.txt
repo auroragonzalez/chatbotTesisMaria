@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: El Palco del Parlamento Andaluz
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Plaza Julián Romea. 30001 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Disfruta del mejor espectáculo gastronómico de Murcia en la Plaza del Teatro Romea. Menús Diarios, comidas y cenas de grupo, eventos y celebraciones especiales.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 968 222 746
+Email: No disponible
+Web oficial: No disponible
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

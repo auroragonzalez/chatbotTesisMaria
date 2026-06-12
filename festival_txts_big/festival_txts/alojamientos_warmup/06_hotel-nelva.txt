@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: HOTEL NELVA
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Centro de Murcia
+[ADDRESS]: Avda. 1º de Mayo S/N - 30006 - Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+El Hotel Nelva se encuentra a solo 15 minutos a pie del centro histórico de Murcia y dispone de piscina y WiFi gratuita. Cuenta con modernas habitaciones, 12 salas para eventos y rodeado de jardines extensos que disfrutan de vistas magníficas a la ciudad.
+
+=== CONTACTO ===
+Teléfono: +34 968 060 200
+Email: No disponible
+Web oficial / reserva: https://www.hotelmurcianelva.com/
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+en Murcia ciudad; cerca del centro; camping/albergue

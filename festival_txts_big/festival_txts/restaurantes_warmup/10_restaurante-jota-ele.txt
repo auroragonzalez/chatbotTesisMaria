@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Restaurante Jota Ele
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Plaza de Santa Isabel, 6, 30004 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Barra de tapas y raciones de esmerada elaboración y calidad máxima en el producto que hacen honor a la tradición murciana del culto a comer en barra.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 968 220 730
+Email: No disponible
+Web oficial: https://jotaelerestaurante.com/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

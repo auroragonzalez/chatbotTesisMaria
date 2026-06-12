@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Maguro Square Sushi
+[CUISINE_TYPE]: INTERNACIONAL
+[ADDRESS]: Plaza Mayor, 2, 30005 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+No disponible
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 868 242 777
+Email: No disponible
+Web oficial: https://maguromurcia.es/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; útil si se busca cocina internacional

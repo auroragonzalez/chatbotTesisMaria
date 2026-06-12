@@ -1,0 +1,9 @@
+[CATEGORY]: PLANES_Y_ACTIVIDADES
+[ACTIVITY]: Pasear de plaza en plaza
+[URL]: No disponible
+
+=== TÍTULO DE LA PÁGINA ===
+Pasear de plaza en plaza
+
+=== TEXTO ===
+Murcia es ciudad de plazas y jardines, para vivirla al aire libre. Descúbrelas una a una.

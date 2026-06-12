@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Cosa Fina
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Plaza Puxmarina, 2, Planta Baja, 30004 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+De Manolo Castro. Gastro Bar.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 615 035 863
+Email: No disponible
+Web oficial: http://www.cosafinagastrobar.com/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

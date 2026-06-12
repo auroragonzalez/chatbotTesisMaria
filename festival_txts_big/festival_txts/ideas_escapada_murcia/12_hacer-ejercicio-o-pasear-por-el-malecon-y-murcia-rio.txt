@@ -1,0 +1,9 @@
+[CATEGORY]: PLANES_Y_ACTIVIDADES
+[ACTIVITY]: Hacer ejercicio o pasear por el Malecón y Murcia Río
+[URL]: No disponible
+
+=== TÍTULO DE LA PÁGINA ===
+Hacer ejercicio o pasear por el Malecón y Murcia Río
+
+=== TEXTO ===
+El paseo murciano por excelencia y uno de los lugares más populares de la ciudad.

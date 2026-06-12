@@ -1,0 +1,9 @@
+[CATEGORY]: FAQ_CASHLESS
+[SECTION]: DURANTE EL FESTIVAL
+[SOURCE]: https://warmupfestival.es/cashless/
+
+=== PREGUNTA ===
+¿Hay importe mínimo de carga en el recinto?
+
+=== RESPUESTA ===
+La carga mínima en el recinto con tarjeta será de 5€ y siempre en múltiplos de 5€ (5€, 10€, 15€, 20€, etc….) Para las recargas en efectivo no habrá importe mínimo de recarga.

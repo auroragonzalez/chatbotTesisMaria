@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: HOTEL BARCELÓ MURCIA SIETE CORONAS
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Centro de Murcia
+[ADDRESS]: Paseo de Garay, 5 - 30003 – Murcia.
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+Ubicado en pleno centro de Murcia, junto al río, a 5 minutos de la Catedral, a 10 minutos del Auditorio y a 5 minutos de la estación de tren y autobuses. Sus 156 habitaciones son exteriores, amplias y están completamente equipadas, muchas de ellas con vistas al río o a la Catedral de Murcia.
+
+=== CONTACTO ===
+Teléfono: +34 968 217 771
+Email: No disponible
+Web oficial / reserva: https://www.barcelo.com/es-es/occidental-murcia-siete-coronas/
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+en Murcia ciudad; cerca del centro; bien conectado; camping/albergue
