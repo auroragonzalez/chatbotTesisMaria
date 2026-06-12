@@ -1,0 +1,123 @@
+[
+  {
+    "id": "pre_01",
+    "phase": "pre",
+    "category": "transporte",
+    "question": "Which bus goes to the Warm Up Festival?",
+    "expected": "Bus line 44 stops at La Fica. There is a special reinforced service every 15 minutes."
+  },
+  {
+    "id": "pre_02",
+    "phase": "pre",
+    "category": "transporte",
+    "question": "Where can I park if I drive to the festival?",
+    "expected": "There is parking at La Fica and a park-and-ride at Carrefour Atalayas."
+  },
+  {
+    "id": "pre_03",
+    "phase": "pre",
+    "category": "transporte",
+    "question": "Is there a taxi stand near the venue?",
+    "expected": "Yes, the official taxi stand is on Avenida Primero de Mayo."
+  },
+  {
+    "id": "pre_04",
+    "phase": "pre",
+    "category": "horarios",
+    "question": "What time do the festival gates open on Friday?",
+    "expected": "On Friday the gates open at 17:00."
+  },
+  {
+    "id": "pre_05",
+    "phase": "pre",
+    "category": "horarios",
+    "question": "When does the headliner perform on Saturday?",
+    "expected": "The headliner performs on Saturday at 22:00. Times are subject to change."
+  },
+  {
+    "id": "pre_06",
+    "phase": "pre",
+    "category": "accesos",
+    "question": "Where is the Warm Up Festival held?",
+    "expected": "The venue is at La Fica, Murcia."
+  },
+  {
+    "id": "durante_01",
+    "phase": "durante",
+    "category": "normativa",
+    "question": "Can I leave the venue and re-enter?",
+    "expected": "Re-entry is only allowed with an active wristband."
+  },
+  {
+    "id": "durante_02",
+    "phase": "durante",
+    "category": "normativa",
+    "question": "Can I bring in a glass water bottle?",
+    "expected": "No. Glass containers are not allowed."
+  },
+  {
+    "id": "durante_03",
+    "phase": "durante",
+    "category": "normativa",
+    "question": "Can I bring alcoholic drinks into the venue?",
+    "expected": "No. Alcoholic drinks are not allowed."
+  },
+  {
+    "id": "durante_04",
+    "phase": "durante",
+    "category": "accesos",
+    "question": "What is the festival's main entrance?",
+    "expected": "General entry is through the Puerta Norte (North Gate)."
+  },
+  {
+    "id": "durante_05",
+    "phase": "durante",
+    "category": "servicios",
+    "question": "Is there a cloakroom at the festival?",
+    "expected": "Yes, there is a cloakroom next to the Puerta Norte."
+  },
+  {
+    "id": "durante_06",
+    "phase": "durante",
+    "category": "servicios",
+    "question": "Can I get free water inside the venue?",
+    "expected": "Yes, there are free hydration points marked inside the venue."
+  },
+  {
+    "id": "durante_07",
+    "phase": "durante",
+    "category": "transporte",
+    "question": "How do I get back to the centre of Murcia when the festival ends?",
+    "expected": "You can take bus line 44 with a stop at La Fica, or a taxi at the official stand on Avenida Primero de Mayo."
+  },
+  {
+    "id": "durante_08",
+    "phase": "durante",
+    "category": "accesos",
+    "question": "Is there a security check at the entrance?",
+    "expected": "Yes, the security check is mandatory at all entrances."
+  },
+  {
+    "id": "post_01",
+    "phase": "post",
+    "category": "servicios",
+    "question": "Where can I claim lost property from the festival?",
+    "expected": "I don't have that information."
+  },
+  {
+    "id": "out_of_scope_01",
+    "phase": "pre",
+    "category": "fuera_de_corpus",
+    "question": "How much does a festival ticket cost?",
+    "expected": "I don't have that information.",
+    "note": "Question intentionally outside the corpus to measure hallucination."
+  },
+  {
+    "id": "out_of_scope_02",
+    "phase": "durante",
+    "category": "fuera_de_corpus",
+    "question": "Are there ATMs inside the venue?",
+    "expected": "I don't have that information.",
+    "note": "Question intentionally outside the corpus to measure hallucination."
+  }
+]

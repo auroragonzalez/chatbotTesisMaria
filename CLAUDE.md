@@ -57,15 +57,11 @@ The container runs the Gradio app on port 7860 with a healthcheck. It does **not
 - `festival_txts/` — the committed corpus and the default `DATA_DIR`. Three festivals: `animal_sound`, `mar_de_musicas`, `warm_up`, each with the four canonical topic files.
 - `festival_txts_big/` — an untracked, richer warm_up corpus (granular topic folders, plus `.csv`/`.jpg` assets and macOS junk like `__MACOSX/`/`.DS_Store`). Its real content lives one level down in `festival_txts_big/festival_txts/`. To use it, point `DATA_DIR` at that inner path and re-ingest; only `**/*.txt` is loaded (CSV/JPG are ignored).
 
-**Evaluation** (`eval/`): `qa_benchmark.json` (17 questions across phases + out-of-scope hallucination checks) + `run_eval.py` (ROUGE-L, BERTScore F1 Spanish, latency, hallucination rate). Outputs per-question CSV and summary CSV.
-
-## Known breakage
-
-- **`eval/run_eval.py` is currently broken.** It does `from app import ... VLLM_URL` (line 39) and calls `VLLM_URL` in `generate_answer`, but the Ollama Cloud refactor renamed that constant to `LLM_URL` and removed `VLLM_URL` from `app.py`. The import now raises `ImportError` before any evaluation runs. To fix, update the eval script to import `LLM_URL` and send the **chat** payload format (`messages=[...]` against `/v1/chat/completions`) — `generate_answer` still posts the old vLLM `prompt=...` body to `/v1/completions`, which the configured Ollama Cloud endpoint does not serve.
+**Evaluation** (`eval/`): a **bilingual** benchmark pair — `qa_benchmark.json` (Spanish) and `qa_benchmark_en.json` (English), 17 questions each with identical `id`/`phase`/`category` (across phases + out-of-scope hallucination checks) — plus `run_eval.py` (ROUGE-L, BERTScore F1, latency, hallucination rate). Select the file with `--benchmark`; output CSVs are tagged with the benchmark stem. Hallucination detection recognizes "no info" phrasings in both languages. The app is bilingual: `SYSTEM_BASE` instructs the LLM to answer in the user's language (ES/EN), though the corpus itself is Spanish.
 
 ## Key coupling to be aware of
 
-- `eval/run_eval.py` imports the embedding model singleton and config constants from `app.py` at module level. This is why renaming a config constant in `app.py` breaks eval (see above). The embedding model loads on import, so running eval or any script that imports `app` requires the model to be cached in `~/.cache/huggingface/`.
+- `eval/run_eval.py` imports the embedding model singleton and config constants (`LLM_URL`, `LLM_API_KEY`, `MODEL_NAME`, etc.) from `app.py` at module level — so renaming a config constant in `app.py` breaks the eval import. (This already happened once: the Ollama Cloud refactor renamed `VLLM_URL`→`LLM_URL` and broke the eval `import` until fixed.) The embedding model loads on import, so running eval or any script that imports `app` requires the model to be cached in `~/.cache/huggingface/`.
 
 ## Environment variables
 

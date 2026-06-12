@@ -10,6 +10,11 @@ Ejecutar:
     python eval/run_eval.py                          # evalúa MODEL_NAME (config de app.py)
     python eval/run_eval.py --models gemma3:27b-cloud
     python eval/run_eval.py --models phi3 salamandra mistral  # compara varios (vLLM)
+    python eval/run_eval.py --benchmark eval/qa_benchmark_en.json  # benchmark en inglés
+
+Benchmarks (bilingüe): qa_benchmark.json (español) y qa_benchmark_en.json (inglés),
+con los mismos id/phase/category. La detección de alucinación reconoce frases de
+"no tengo información" en ambos idiomas.
 
 Alias opcionales (alias → nombre HuggingFace, para backends vLLM):
     phi3        microsoft/Phi-3-mini-4k-instruct
@@ -87,10 +92,18 @@ def hallucination_rate(answers: list[str], expected_no_info: list[bool]) -> floa
     NO respondió 'No tengo esa información' (o equivalente).
     """
     no_info_phrases = [
+        # español
         "no tengo esa información",
         "no dispongo de esa información",
         "no está en el contexto",
         "no tengo información",
+        # inglés (para el benchmark bilingüe)
+        "i don't have that information",
+        "i do not have that information",
+        "i don't have information",
+        "i don't have enough information",
+        "not in the context",
+        "no information",
     ]
     hallucinated = 0
     total = sum(expected_no_info)
@@ -155,11 +168,12 @@ def generate_answer(question: str, phase: str, model_name: str, max_tokens: int 
 # EVALUACIÓN PRINCIPAL
 # ─────────────────────────────────────────────
 
-def run_evaluation(model_aliases: list[str]) -> None:
-    benchmark = json.loads(BENCHMARK_PATH.read_text(encoding="utf-8"))
+def run_evaluation(model_aliases: list[str], benchmark_path: Path = BENCHMARK_PATH) -> None:
+    benchmark = json.loads(benchmark_path.read_text(encoding="utf-8"))
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    results_path = Path(__file__).parent / f"results_{timestamp}.csv"
-    summary_path = Path(__file__).parent / f"summary_{timestamp}.csv"
+    tag = benchmark_path.stem  # p.ej. qa_benchmark / qa_benchmark_en → distingue ES de EN
+    results_path = Path(__file__).parent / f"results_{tag}_{timestamp}.csv"
+    summary_path = Path(__file__).parent / f"summary_{tag}_{timestamp}.csv"
 
     all_rows = []
 
@@ -276,5 +290,11 @@ if __name__ == "__main__":
         default=[MODEL_NAME],
         help=f"Modelos a evaluar (nombre directo o alias). Alias disponibles: {', '.join(MODEL_ALIASES)}",
     )
+    parser.add_argument(
+        "--benchmark",
+        type=Path,
+        default=BENCHMARK_PATH,
+        help="JSON de preguntas a evaluar (p.ej. eval/qa_benchmark_en.json para inglés).",
+    )
     args = parser.parse_args()
-    run_evaluation(args.models)
+    run_evaluation(args.models, args.benchmark)
