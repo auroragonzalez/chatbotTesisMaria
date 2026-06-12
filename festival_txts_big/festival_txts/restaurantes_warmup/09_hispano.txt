@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Hispano
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Calle Radio Murcia, 4, 30001 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Restaurante acogedor y elegante en el centro de la ciudad de Murcia, donde disfrutar de la gastronomía tradicional murciana con toques renovados y de producto.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 968 21 61 52
+Email: No disponible
+Web oficial: http://www.restaurantehispano.es/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

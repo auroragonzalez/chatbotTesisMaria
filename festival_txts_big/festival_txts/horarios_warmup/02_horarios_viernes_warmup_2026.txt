@@ -1,0 +1,31 @@
+[CATEGORY]: HORARIOS_FESTIVAL_DIA
+[EVENT]: WARM UP Estrella de Levante 2026
+[DAY]: Viernes 1 de mayo
+[SOURCE_PAGE]: https://warmupfestival.es/horarios-3/
+
+=== HORARIOS ===
+Estrella de Levante | Ginebras | 19:15-20:15
+Estrella de Levante | Guitarricadelafuente | 21:25-22:40
+Estrella de Levante | James | 00:00-01:10
+Estrella de Levante | Soulwax | 02:25-03:25
+ElPozo King Upp | Veintiuno | 18:10-19:10
+ElPozo King Upp | Sanguijuelas del Guadiana | 20:20-21:20
+ElPozo King Upp | León Benavente | 22:50-23:50
+ElPozo King Upp | Ultraligera | 01:20-02:20
+ElPozo King Upp | Ladilla Rusa | 03:30-04:30
+Ballantine's | Perdón | 17:45-18:30
+Ballantine's | Amore | 19:35-20:35
+Ballantine's | Biznaga | 21:25-22:25
+Ballantine's | Midnight Generation | 23:10-00:10
+Ballantine's | Akrila | 00:55-01:55
+Ballantine's | VVV (Trippin You) | 02:40-03:40
+Ballantine's | Neoverbeneo | 04:30-06:00
+ESC | Blackpanda (live) | 18:00-19:00
+ESC | Rem Djs | 19:00-20:30
+ESC | 1111 (live) | 20:30-21:30
+ESC | Juguete | 21:30-23:00
+ESC | Drea | 23:00-00:30
+ESC | Riria | 00:30-02:00
+ESC | Ruptura | 02:00-03:30
+ESC | Panasoma | 03:30-04:30
+ESC | Bclip | 04:30-06:00

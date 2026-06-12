@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Restaurante Virgen del Mar
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Plaza de San Nicolás, 3, bajo, 30005 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Cocina con productos del mar y guisos caseros en su mayoría marineros. Agradable y acogedor ambiente con terraza y bar.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 968 216 679
+Email: No disponible
+Web oficial: http://www.restaurantevirgendelmar.es/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

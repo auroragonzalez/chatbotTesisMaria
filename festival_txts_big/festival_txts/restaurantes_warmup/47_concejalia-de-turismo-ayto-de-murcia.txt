@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Concejalía de Turismo. Ayto de Murcia
+[CUISINE_TYPE]: INTERNACIONAL
+[ADDRESS]: C/ Los Molinos - Edificio Museo Hidráulico - 30002 - Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+/*******************************/ // this is for the testimonial 3 /*******************************/ $('.testi3').owlCarousel({ loop: true, margin: 30, center: true, nav: false, dots: false, autoplay: true, responsiveClass: true, responsive: { 0: { items: 1, nav: false }, 768: { items: 2 }, 1170: { items: 3 }, 1800: { items: 5 } } })filterSelection("all") function filterSelection(c) { var x, i; x = document.getElementsByClassName("filterDiv"); if (c == "all") c = ""; for (i = 0; i < x.length; i++) { w3RemoveClass(x[i], "show"); if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show"); } } function w3AddClass(element, name) { var i, arr1, arr2; arr1 = element.className.split(" "); arr2 = name.split(" "); for (i = 0; i < arr2.length; i++) { if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];} } } function w3RemoveClass(element, name) { var i, arr1, arr2; arr1 = element.className.split(" "); arr2 = name.split(" "); for (i = 0; i < arr2.length; i++) { while (arr1.indexOf(arr2[i]) > -1) { arr1.splice(arr1.indexOf(arr2[i]), 1); } } element.className = arr1.join(" "); }$(function () { $(window).scroll(function () { if ($(this).scrollTop() > 150 || screen.width <= 768) { $('.navbar-brand-img img').attr('src','../images/LOGO-MURCIA_BLANCO.png'); } if ($(this).scrollTop() < 150) { $('.navbar-brand-img img').attr('src','../images/LOGO-MURCIA_PANTONE.png'); } if (screen.width <= 768) { $('.navbar-brand-img img').attr('src','../images/LOGO-MURCIA_BLANCO.png'); } }) });function openSearch() { document.getElementById("myOverlay").style.display = "block"; }; function closeSearch() { document.getElementById("myOverlay").style.display = "none"; };$(function(){ $(document).on('click', function(event) { /*if (!$(event.target).closest('#top-search').length) { $body.toggleClass('top-search-open', false); } if (!$(event.target).closest('#top-cart').length) { $topCart.toggleClass('top-cart-open', false); } if (!$(event.target).closest('#page-menu').length) { $pagemenu.toggleClass('pagemenu-active', false); } if (!$(event.target).closest('#side-panel').length) { $body.toggleClass('side-panel-open', false); }*/ }); $("#top-search-trigger").click(function(e){ $body.toggleClass('top-search-open'); $topCart.toggleClass('top-cart-open', false); $( '#primary-menu > ul, #primary-menu > div > ul' ).toggleClass("show", false); $pagemenu.toggleClass('pagemenu-active', false); if ($body.hasClass('top-search-open')){ $topSearch.find('input').focus(); } e.stopPropagation(); e.preventDefault(); }); });
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 968 35 86 00
+Email: informacion.turismo@ayto-murcia.es
+Web oficial: No disponible
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+útil si se busca cocina internacional

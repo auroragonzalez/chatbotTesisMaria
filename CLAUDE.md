@@ -23,9 +23,18 @@ python app.py --ingest --festival warm_up   # single festival
 # Launch the chatbot (Gradio on port 7860)
 python app.py
 
-# Run evaluation benchmark
+# Run evaluation benchmark (see "Known breakage" below — currently fails to import)
 python eval/run_eval.py --models phi3 salamandra mistral qwen
 ```
+
+### Docker (production deployment)
+
+```bash
+# Build + run; reads .env, mounts ./chroma_db and ./festival_txts, forces EMBEDDING_DEVICE=cpu
+docker compose up --build
+```
+
+The container runs the Gradio app on port 7860 with a healthcheck. It does **not** run `--ingest`; populate `chroma_db/` on the host first (the volume is bind-mounted) or exec the ingest command inside the container.
 
 ## Architecture
 
@@ -42,20 +51,29 @@ python eval/run_eval.py --models phi3 salamandra mistral qwen
 
 **Festival auto-detection**: `get_festivals()` scans `festival_txts/` for subdirectories at runtime. Adding a new festival is just creating a folder with `.txt` files and re-ingesting.
 
-**Corpus format**: plain-text Spanish files organized by festival and topic (`faq.txt`, `horarios.txt`, `accesos.txt`, `transporte.txt`). One idea per paragraph or Q&A format.
+**Corpus format**: plain-text Spanish files organized by festival and topic (`faq.txt`, `horarios.txt`, `accesos.txt`, `transporte.txt`). One idea per paragraph or Q&A format. Ingestion globs `**/*.txt` recursively, so nested topic folders are fine.
+
+**Two corpora**:
+- `festival_txts/` — the committed corpus and the default `DATA_DIR`. Three festivals: `animal_sound`, `mar_de_musicas`, `warm_up`, each with the four canonical topic files.
+- `festival_txts_big/` — an untracked, richer warm_up corpus (granular topic folders, plus `.csv`/`.jpg` assets and macOS junk like `__MACOSX/`/`.DS_Store`). Its real content lives one level down in `festival_txts_big/festival_txts/`. To use it, point `DATA_DIR` at that inner path and re-ingest; only `**/*.txt` is loaded (CSV/JPG are ignored).
 
 **Evaluation** (`eval/`): `qa_benchmark.json` (17 questions across phases + out-of-scope hallucination checks) + `run_eval.py` (ROUGE-L, BERTScore F1 Spanish, latency, hallucination rate). Outputs per-question CSV and summary CSV.
 
+## Known breakage
+
+- **`eval/run_eval.py` is currently broken.** It does `from app import ... VLLM_URL` (line 39) and calls `VLLM_URL` in `generate_answer`, but the Ollama Cloud refactor renamed that constant to `LLM_URL` and removed `VLLM_URL` from `app.py`. The import now raises `ImportError` before any evaluation runs. To fix, update the eval script to import `LLM_URL` and send the **chat** payload format (`messages=[...]` against `/v1/chat/completions`) — `generate_answer` still posts the old vLLM `prompt=...` body to `/v1/completions`, which the configured Ollama Cloud endpoint does not serve.
+
 ## Key coupling to be aware of
 
-- `eval/run_eval.py` imports the embedding model singleton and config constants from `app.py` at module level. Changing variable names in `app.py` (e.g., `VLLM_URL` → `LLM_URL`) can break the eval script silently.
-- The embedding model loads on import, so running eval or any script that imports `app` requires the model to be cached in `~/.cache/huggingface/`.
+- `eval/run_eval.py` imports the embedding model singleton and config constants from `app.py` at module level. This is why renaming a config constant in `app.py` breaks eval (see above). The embedding model loads on import, so running eval or any script that imports `app` requires the model to be cached in `~/.cache/huggingface/`.
 
 ## Environment variables
 
-All have defaults; see `.env.example`. The ones that change behavior most:
-- `LLM_URL` — endpoint for the chat API (default: Ollama local at `http://localhost:11434/v1/chat/completions`)
-- `MODEL_NAME` — model name sent to the LLM endpoint (default: `phi3:mini`)
-- `LLM_API_KEY` — API key for cloud providers (sent as `Authorization: Bearer`)
-- `EMBEDDING_DEVICE` — `cuda` or `cpu`
+All have defaults; see `.env.example`. Note the **code defaults differ from the shipped `.env.example`**: `app.py` defaults to local Ollama (`http://localhost:11434/v1/chat/completions`, `phi3:mini`), but `.env.example` configures **Ollama Cloud** (`https://ollama.com/v1/chat/completions`, `gemma3:27b-cloud`) — the intended production backend. The ones that change behavior most:
+- `LLM_URL` — endpoint for the chat API (code default: local Ollama; `.env.example`: Ollama Cloud). Also accepts `VLLM_URL` as a fallback name.
+- `MODEL_NAME` — model name sent to the LLM endpoint (code default: `phi3:mini`; `.env.example`: `gemma3:27b-cloud`)
+- `LLM_API_KEY` — API key for cloud providers, sent as `Authorization: Bearer` (also accepts `OLLAMA_API_KEY` as a fallback name). Required for Ollama Cloud.
+- `EMBEDDING_DEVICE` — `cuda` or `cpu` (Docker forces `cpu`)
 - `CHUNK_SIZE`, `CHUNK_OVERLAP`, `RETRIEVER_K` — RAG parameters
+
+`generate_stream` picks the payload shape from the URL: `/v1/chat/completions` → OpenAI/Ollama chat format; anything else → vLLM `/v1/completions` format. Switching backends is purely a `LLM_URL`/`MODEL_NAME`/`LLM_API_KEY` change.

@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: HESPERIA MURCIA CENTRO
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Centro de Murcia
+[ADDRESS]: Calle Madre de Dios, 4 - 30004 - Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+Sus 120 habitaciones han sido recientemente renovadas para atender todas las necesidades. Distribuidas en seis plantas, destacan por sus diferentes tipologías que permiten acoger desde un único huésped, hasta cuatro, siendo la comodidad y el espacio una constante.
+
+=== CONTACTO ===
+Teléfono: +34 968 217 789
+Email: No disponible
+Web oficial / reserva: https://www.hesperia.com/es/es/hoteles/espana/murcia/hesperia-murcia-centro
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+en Murcia ciudad; cerca del centro; camping/albergue

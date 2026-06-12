@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: PENSIÓN PUERTO RICO
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Murcia y alrededores
+[ADDRESS]: Rafael Alberti, 2, Bajo, 30160
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+No disponible
+
+=== CONTACTO ===
+Teléfono: +34 968 850 022
+Email: No disponible
+Web oficial / reserva: http://www.pensionpuertorico.es/
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+camping/albergue

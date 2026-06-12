@@ -1,0 +1,12 @@
+[CATEGORY]: RESTAURANTES_RESUMEN
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== TIPOS DE RESTAURANTES DISPONIBLES ===
+En la página oficial de Turismo de Murcia aparecen restaurantes organizados por bloques. En esta extracción se han detectado: TRADICIONAL: 35; INTERNACIONAL: 11.
+
+=== UTILIDAD PARA ASISTENTES AL WARM UP ===
+Esta capa del corpus sirve para responder preguntas sobre dónde comer en Murcia antes o después del festival.
+Para recomendaciones rápidas, conviene priorizar restaurantes cercanos al centro o bien situados para combinar visita urbana y asistencia al evento.
+
+=== LIMITACIÓN ===
+Los horarios no aparecen de forma estable en la fuente visible, así que se marcan como no disponibles salvo revisión manual.

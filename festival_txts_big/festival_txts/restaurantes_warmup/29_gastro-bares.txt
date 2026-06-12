@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Gastro-bares
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: 4ª planta de El Corte Inglés Av Libertad, 1 30007 Murcia.
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Tapas y pinchos con originalidad, innovación y creatividad con productos de temporada y materias primas de altísima calidad.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 968 295 379
+Email: No disponible
+Web oficial: https://www.latrastiendadepablogonzalez.com/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

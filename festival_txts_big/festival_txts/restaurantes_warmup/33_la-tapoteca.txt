@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: La Tapoteca
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Plaza San Pedro, 3, 30004 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+De Manuel Álvarez. Restaurante en el que la tapa es la protagonista. Lugar encantador para murcianos y turistas que visitan Murcia.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 663 724 059
+Email: No disponible
+Web oficial: http://www.latapeoteca.es/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

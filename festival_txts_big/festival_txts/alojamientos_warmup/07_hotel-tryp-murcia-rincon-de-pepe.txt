@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: HOTEL TRYP MURCIA RINCÓN DE PEPE
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Centro de Murcia
+[ADDRESS]: Plaza Apóstoles, 34 - 30001 - Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+El hotel Tryp Rincón de Pepe es un establecimiento de cuatro estrellas ubicado en el centro de Murcia, España, a un breve trayecto a pie de las atracciones turísticas, de excelentes tiendas y de numerosos restaurantes y bares.
+
+=== CONTACTO ===
+Teléfono: +34 968 212 239
+Email: No disponible
+Web oficial / reserva: https://www.melia.com/es/hoteles/espana/murcia/tryp-murcia-rincon-de-pepe/index.htm
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+en Murcia ciudad; cerca del centro; camping/albergue

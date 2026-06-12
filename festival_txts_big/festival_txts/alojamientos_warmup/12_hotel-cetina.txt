@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: HOTEL CETINA
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Centro de Murcia
+[ADDRESS]: Calle Radio Murcia, 3 - 30001, Murcia.
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+Un remanso de paz y tranquilidad entre los dos monumentos más simbólicos y céntricos de la ciudad de Murcia; La Catedral y El Real Casino, así como del centro financiero y comercial de la ciudad. El renovado Hotel Cetina está inmerso en la viva historia de la ciudad, ya que fue inaugurado como hotel de renombre en el año 1975.
+
+=== CONTACTO ===
+Teléfono: +34 968 100 800
+Email: No disponible
+Web oficial / reserva: https://www.cetinahotels.com/cetina-murcia/
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+en Murcia ciudad; cerca del centro; camping/albergue

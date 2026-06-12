@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: HOTEL B&B MURCIA
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Centro de Murcia
+[ADDRESS]: Av. Juan de Borbón, parcela 2A. Centro Comercial Thader , 30110 - Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+Un hotel completamente renovado que ofrece todos los servicios que necesitas para hacer que tu visita a Murcia y sus alrededores sea lo más confortable y placentera posible. Si estás buscando un hotel en Murcia al mejor precio, bien comunicado y muy agradable, este es tu alojamiento adecuado.
+
+=== CONTACTO ===
+Teléfono: +34 868 694 653
+Email: No disponible
+Web oficial / reserva: https://www.hotel-bb.com/es/hotel/murcia
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+en Murcia ciudad; cerca del centro; bien conectado; camping/albergue

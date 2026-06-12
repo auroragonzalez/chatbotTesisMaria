@@ -1,2 +1,10 @@
 .env
 chroma_db/
+
+# Python build artifacts
+__pycache__/
+*.pyc
+
+# macOS junk (e.g. from unzipped corpus archives)
+.DS_Store
+__MACOSX/

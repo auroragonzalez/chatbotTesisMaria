@@ -1,0 +1,9 @@
+[CATEGORY]: PLANES_Y_ACTIVIDADES
+[ACTIVITY]: Recorrer el río puente a puente
+[URL]: No disponible
+
+=== TÍTULO DE LA PÁGINA ===
+Recorrer el río puente a puente
+
+=== TEXTO ===
+Te proponemos un paseo fantástico que te llevará a lo largo del Río Segura a su paso por la ciudad recorriendo sus puentes.

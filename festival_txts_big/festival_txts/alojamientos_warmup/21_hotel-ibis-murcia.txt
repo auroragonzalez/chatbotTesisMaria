@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: HOTEL IBIS MURCIA
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Zona bien conectada / tranvía
+[ADDRESS]: Avda. Juan Carlos I, s/n - 30009 - Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+El hotel está situado a 800 metros del casco histórico de la ciudad y a 3 kilómetros del Palacio de Congresos y del Parque de Exposiciones. Todas las habitaciones están equipadas con aire acondicionado, calefacción, televisión y Wifi para ofrecerte el mayor confort. Dispone de servicio de restaurante, snack/bar 24h y parking cubierto.
+
+=== CONTACTO ===
+Teléfono: +34 968 274 939
+Email: No disponible
+Web oficial / reserva: https://all.accor.com/hotel/3676/index.es.shtml
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+bien conectado; camping/albergue

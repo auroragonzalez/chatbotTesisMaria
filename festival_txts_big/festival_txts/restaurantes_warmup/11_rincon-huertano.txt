@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Rincón Huertano
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Calle de los Lorcas, 16, 30570 Beniaján, Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+El Rincón Huertano de Murcia nació siendo un pequeño restaurante en la huerta y se ha convertido en un referente de la gastronomía murciana. Fiel conservador de las tradiciones y costumbres de Murcia
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 968 87 41 52
+Email: No disponible
+Web oficial: http://www.rinconhuertano.com/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+buena opción para cocina murciana

@@ -1,0 +1,12 @@
+[CATEGORY]: ALOJAMIENTO_RESUMEN
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== TIPOS DE ALOJAMIENTO DISPONIBLES EN MURCIA ===
+En la página oficial de Turismo de Murcia aparecen distintas categorías de alojamiento. En esta extracción se han detectado: CAMPING/ALBERGUE: 32; CASA RURAL: 4.
+
+=== ZONAS RECOMENDABLES SI VAS AL WARM UP ===
+Para asistentes al Warm Up, conviene priorizar alojamientos en Murcia ciudad, especialmente centro urbano o zonas bien conectadas.
+También son recomendables alojamientos con acceso cómodo a transporte público o buenas conexiones urbanas.
+
+=== RELACIÓN CON EL FESTIVAL Y EL ACCESO AL RECINTO ===
+Como criterio para el asistente, deberían priorizarse alojamientos en Murcia ciudad, cerca del centro o bien conectados, para facilitar el desplazamiento al festival.

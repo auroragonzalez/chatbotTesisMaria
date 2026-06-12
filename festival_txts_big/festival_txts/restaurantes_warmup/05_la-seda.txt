@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: La Seda
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Vereda Catalán, 15, 30162 Santa Cruz, Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Ubicado en un palacete del siglo XVII y en plena huerta. Cocina de temporada y de productos locales de gran calidad. Excepcional bodega con vinos. 1 Sol Repsol
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 968 870 848
+Email: No disponible
+Web oficial: http://www.palacetelaseda.com/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+buena opción para cocina murciana

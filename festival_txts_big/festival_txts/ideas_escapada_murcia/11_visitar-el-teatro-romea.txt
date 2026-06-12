@@ -1,0 +1,9 @@
+[CATEGORY]: PLANES_Y_ACTIVIDADES
+[ACTIVITY]: Visitar el Teatro Romea
+[URL]: No disponible
+
+=== TÍTULO DE LA PÁGINA ===
+Visitar el Teatro Romea
+
+=== TEXTO ===
+Uno de los edificios históricos con más encanto de Murcia.

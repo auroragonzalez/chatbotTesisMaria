@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Rincón de Alfonso
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Carril Torre Los Leales 4, 30011, Los Dolores, Murcia.
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Restaurante en plena huerta de Murcia rodeado de limoneros, en un espacio tranquilo y acogedor, destacando su cocina casera mediterránea y nuestro trato familiar.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 659 25 41 21
+Email: No disponible
+Web oficial: No disponible
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+buena opción para cocina murciana

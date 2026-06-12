@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: HOTEL PACOCHE MURCIA
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Centro de Murcia
+[ADDRESS]: Calle Cartagena, 30 - 30002 - Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+El Hotel Pacoche está ubicado en el centro de la ciudad de Murcia, a tan solo 5 minutos del centro histórico-cultural y zona comercial de la ciudad. Así mismo, de acceso inmediato desde las autovías dirección Madrid - Valencia - Andalucía. El Hotel pone a su disposición 72 habitaciones amplias y confortables y totalmente equipadas.
+
+=== CONTACTO ===
+Teléfono: +34 968 213 385
+Email: No disponible
+Web oficial / reserva: https://pacoche.es/
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+en Murcia ciudad; cerca del centro; bien conectado; camping/albergue

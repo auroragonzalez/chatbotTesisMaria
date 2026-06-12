@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: La parranda
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Plaza San Juan, s/n, 30003 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Tapas, cocina murciana y arroces por encargo en un elegante espacio de aire rústico-chic con terraza cubierta y barra de tapeo murciano . Un lugar para comer la auténtica y tradicional gastronomía murciana basada principalmente en los productos de la huerta.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 968 22 06 75
+Email: No disponible
+Web oficial: http://www.laparranda.es/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

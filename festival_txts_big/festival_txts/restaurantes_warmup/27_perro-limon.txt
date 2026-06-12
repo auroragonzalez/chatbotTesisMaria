@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Perro Limón
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Calle Navarra, 4, 30005 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+De María Crespo y Miguel Ángel Albaladejo. Cocina canalla, divertida y con técnica creada para compartir. Cocina del mundo, para todo el mundo.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 722 651 057
+Email: No disponible
+Web oficial: https://www.facebook.com/perrolimon4/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

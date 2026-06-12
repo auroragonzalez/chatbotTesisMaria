@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Local de ensayo
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Calle Policía Ángel García, 20, 30006 Puente Tocinos, Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Del Chef David López. Cocina creativa y técnica para actualizar las recetas murcianas con un carácter y estilo propios, nuevas ideas y ocurrencias.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 968 24 70 54
+Email: No disponible
+Web oficial: https://www.localdensayo.com/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+buena opción para cocina murciana

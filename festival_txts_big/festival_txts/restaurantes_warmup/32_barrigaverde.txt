@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Barrigaverde
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Calle Maestro Salvador Ortiz, 6, 30004 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+De Juan Pablo Ortiz. Tapas contemporáneas para compartir, prestando especial atención al producto de temporada.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 659 730 349
+Email: No disponible
+Web oficial: http://www.barrigaverdetaberna.com/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

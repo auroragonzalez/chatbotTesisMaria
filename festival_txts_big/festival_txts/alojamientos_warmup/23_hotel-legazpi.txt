@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: HOTEL LEGAZPI
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Centro de Murcia
+[ADDRESS]: Avda. Miguel de Cervantes, 6 - 30009 - Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+Este funcional hotel reformado en 2004 está situado en el centro de la ciudad, muy cerca de todos los puntos de interés y monumentos de Murcia. Su ventajosa ubicación implica que se puede llegar a pie y en pocos minutos tanto a las tiendas como a los atractivos culturales del municipio. Se trata de un hotel perfectamente equipado.
+
+=== CONTACTO ===
+Teléfono: +34 968 293 081
+Email: No disponible
+Web oficial / reserva: http://hotellegazpi.es/
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+en Murcia ciudad; cerca del centro; camping/albergue

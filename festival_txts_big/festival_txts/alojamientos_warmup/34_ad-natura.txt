@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: AD NATURA
+[TYPE]: CASA RURAL
+[ZONE]: Murcia y alrededores
+[ADDRESS]: Carril Aceros, 22, 30007 - Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+No disponible
+
+=== CONTACTO ===
+Teléfono: +34 678 051 140
+Email: No disponible
+Web oficial / reserva: https://es-la.facebook.com/casaruraladnatura/
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+casa rural

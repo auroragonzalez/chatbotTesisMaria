@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Cocina Italiana, Japonesa, Argentina, Vegana y vegetariana.
+[CUISINE_TYPE]: INTERNACIONAL
+[ADDRESS]: Plaza Julián Romea, 3, 30001 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+No disponible
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 968 223 900
+Email: No disponible
+Web oficial: https://www.latagliatella.es/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; útil si se busca cocina internacional

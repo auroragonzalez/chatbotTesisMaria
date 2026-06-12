@@ -1,0 +1,9 @@
+[CATEGORY]: PLANES_Y_ACTIVIDADES
+[ACTIVITY]: IR DE COMPRAS
+[URL]: No disponible
+
+=== TÍTULO DE LA PÁGINA ===
+IR DE COMPRAS
+
+=== TEXTO ===
+Conoce las novedades de las zonas de shopping de la ciudad. Hay un montón de tiendas con encanto en el centro de Murcia.

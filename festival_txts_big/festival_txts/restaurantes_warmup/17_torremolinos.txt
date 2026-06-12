@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Torremolinos
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Ctra. de Churra, n 113, 30110 Churra, Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Guisos carnes y embutidos hacen del Torremolinos un restaurante típico de la gastronomía murciana
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 968 247 481
+Email: No disponible
+Web oficial: http://www.torremolinosrestaurante.com/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+buena opción para cocina murciana

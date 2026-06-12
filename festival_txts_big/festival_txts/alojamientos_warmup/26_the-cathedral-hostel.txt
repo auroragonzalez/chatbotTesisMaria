@@ -1,0 +1,17 @@
+[CATEGORY]: ALOJAMIENTO
+[NAME]: THE CATHEDRAL HOSTEL
+[TYPE]: CAMPING/ALBERGUE
+[ZONE]: Murcia y alrededores
+[ADDRESS]: C/ Trapería , 19, 3º Izqda. 30001
+[SOURCE]: https://www.turismodemurcia.es/es/alojamiento
+
+=== DESCRIPCIÓN ===
+No disponible
+
+=== CONTACTO ===
+Teléfono: +34 601 715 520
+Email: No disponible
+Web oficial / reserva: https://thecathedralhostel.com/
+
+=== OBSERVACIÓN ÚTIL PARA FESTIVALEROS ===
+camping/albergue

@@ -1,0 +1,9 @@
+[CATEGORY]: FAQ_CASHLESS
+[SECTION]: DESPUÉS DEL FESTIVAL
+[SOURCE]: https://warmupfestival.es/cashless/
+
+=== PREGUNTA ===
+¿Cuánto tardaré en recibir el reembolso en mi cuenta bancaria?
+
+=== RESPUESTA ===
+Una vez solicitado el reembolso, recibirás el saldo restante en tu cuenta bancaria en un máximo de un mes, dependiendo de tu entidad bancaria.

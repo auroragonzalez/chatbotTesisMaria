@@ -1,0 +1,6 @@
+[CATEGORY]: PLANES_Y_ACTIVIDADES_RESUMEN
+[SOURCE]: https://www.turismodemurcia.es/es/ideas-hacer-murcia
+
+=== DESCRIPCIÓN GENERAL ===
+La página 'Ideas para tu próxima escapada a Murcia' agrupa propuestas turísticas y culturales para visitantes que quieren explorar la ciudad.
+Incluye actividades relacionadas con patrimonio, tapeo, compras, paseos urbanos, miradores, monumentos, teatro, río, jardines y excursiones cercanas.

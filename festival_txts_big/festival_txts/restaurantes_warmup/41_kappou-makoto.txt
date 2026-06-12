@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Kappou Makoto
+[CUISINE_TYPE]: INTERNACIONAL
+[ADDRESS]: C/ Historiador Juan Torres Fontes 20, 30011 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Restaurante japonés. Del Chef Makoto Himeno
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 627 656 767
+Email: No disponible
+Web oficial: https://www.kappoumakoto.com/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+útil si se busca cocina internacional

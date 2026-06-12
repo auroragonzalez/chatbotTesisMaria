@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Mano a Mano
+[CUISINE_TYPE]: INTERNACIONAL
+[ADDRESS]: Calle Gutiérrez Mellado, 9, 30008 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Restaurante italiano. Pizzería y Empanadillería
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 644 722 911
+Email: No disponible
+Web oficial: https://www.manoamano-pye.com/murcia
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; útil si se busca cocina internacional

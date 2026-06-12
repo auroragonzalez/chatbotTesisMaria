@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Kokoro Gastro Sushi
+[CUISINE_TYPE]: INTERNACIONAL
+[ADDRESS]: Complejo Princesa, Av. de la Libertad, 6, 30009 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+No disponible
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 868 077 000
+Email: No disponible
+Web oficial: https://www.kokorogastrosushi.com/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+útil si se busca cocina internacional

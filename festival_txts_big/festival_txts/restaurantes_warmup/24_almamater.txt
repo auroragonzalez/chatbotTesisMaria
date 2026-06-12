@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: AlmaMater
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Calle Madre de Dios, 15, 30004 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Del Chef Juan Guillamón. Cocina de mercado donde la materia prima es el alma de cada plato, creativa y en constante evolución. Arraigada a la cultura gastronómica tradicional.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 868 06 95 57
+Email: No disponible
+Web oficial: https://almamatermurcia.com/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

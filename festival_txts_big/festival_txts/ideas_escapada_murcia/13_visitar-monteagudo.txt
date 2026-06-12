@@ -1,0 +1,9 @@
+[CATEGORY]: PLANES_Y_ACTIVIDADES
+[ACTIVITY]: Visitar Monteagudo
+[URL]: No disponible
+
+=== TÍTULO DE LA PÁGINA ===
+Visitar Monteagudo
+
+=== TEXTO ===
+Podrás ver el castillo de Monteagudo y sobre él la impresionante escultura del Corazón de Jesús.

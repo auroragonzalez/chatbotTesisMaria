@@ -1,0 +1,19 @@
+[CATEGORY]: RESTAURANTE
+[NAME]: Real Casino de Murcia
+[CUISINE_TYPE]: TRADICIONAL
+[ADDRESS]: Calle Trapería, 22, 30001 Murcia
+[SOURCE]: https://www.turismodemurcia.es/es/donde-comer
+
+=== ESPECIALIDADES / DESCRIPCIÓN ===
+Gastronomía tradicional de la Región de Murcia en un entorno arquitectónico único.
+
+=== HORARIOS ===
+No disponible en la fuente
+
+=== CONTACTO ===
+Teléfono: +34 968 222 809
+Email: No disponible
+Web oficial: http://www.restauranterealcasino.com/
+
+=== OBSERVACIÓN ÚTIL PARA EL ASISTENTE ===
+cerca del centro; buena opción para cocina murciana

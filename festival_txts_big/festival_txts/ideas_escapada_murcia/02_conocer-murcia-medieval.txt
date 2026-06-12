@@ -1,0 +1,9 @@
+[CATEGORY]: PLANES_Y_ACTIVIDADES
+[ACTIVITY]: CONOCER MURCIA MEDIEVAL
+[URL]: No disponible
+
+=== TÍTULO DE LA PÁGINA ===
+CONOCER MURCIA MEDIEVAL
+
+=== TEXTO ===
+Te invitamos a hacer un recorrido histórico por una ciudad milenaria.
