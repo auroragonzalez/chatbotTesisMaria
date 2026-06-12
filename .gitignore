@@ -8,3 +8,6 @@ __pycache__/
 # macOS junk (e.g. from unzipped corpus archives)
 .DS_Store
 __MACOSX/
+
+# LibreOffice/OpenOffice lock files
+.~lock.*#
