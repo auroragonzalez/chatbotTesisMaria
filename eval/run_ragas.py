@@ -19,12 +19,14 @@ from pathlib import Path
 os.environ.setdefault("RAGAS_DO_NOT_TRACK", "true")
 
 ANS_JSON = Path(__file__).parent / "festai_eval_answers.json"
-OUT_JSON = Path(__file__).parent / "festai_eval_ragas.json"
-
 API_KEY = os.environ.get("LLM_API_KEY") or os.environ.get("OLLAMA_API_KEY")
 BASE_URL = os.environ.get("LLM_BASE_URL", "https://ollama.com/v1")
 JUDGE_MODEL = os.environ.get("JUDGE_MODEL", "gemma3:27b")
 EMB_MODEL = "intfloat/multilingual-e5-base"
+
+# Salida por juez (para el panel/jurado): festai_eval_ragas_<slug>.json
+_SLUG = JUDGE_MODEL.replace(":", "-").replace("/", "-")
+OUT_JSON = Path(__file__).parent / f"festai_eval_ragas_{_SLUG}.json"
 
 from langchain_openai import ChatOpenAI
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -37,8 +39,11 @@ from ragas.run_config import RunConfig
 
 
 def build_judge():
+    # max_tokens generoso: los jueces que razonan (deepseek, minimax) consumen
+    # tokens en 'reasoning' antes de emitir el JSON; sin holgura saldría vacío.
     chat = ChatOpenAI(model=JUDGE_MODEL, base_url=BASE_URL, api_key=API_KEY,
-                      temperature=0, timeout=180, max_retries=2)
+                      temperature=0, timeout=240, max_retries=3,
+                      max_tokens=int(os.environ.get("JUDGE_MAX_TOKENS", "3000")))
     return LangchainLLMWrapper(chat)
 
 
