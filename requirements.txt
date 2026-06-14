@@ -16,6 +16,7 @@ chromadb>=0.5.0
 # Production app
 gradio>=4.0.0
 requests>=2.31.0
+python-dotenv>=1.0.0   # carga .env en app.py (load_dotenv)
 
 # Jupyter kernel
 ipykernel>=6.29.0
