@@ -1,11 +1,11 @@
-# FestGPT — How To
+# FestAI — How To
 
 ## Estructura del proyecto
 
 ```
 chatbotTesis/
 ├── app.py                  ← Aplicación de producción (chatbot + ingestión)
-├── festgpt_pipeline.ipynb  ← Prototipo/exploración en notebook
+├── festai_pipeline.ipynb  ← Prototipo/exploración en notebook
 ├── requirements.txt        ← Dependencias Python
 ├── HOW_TO.md               ← Esta guía
 ├── chroma_db/              ← Base de datos vectorial (se genera automáticamente)

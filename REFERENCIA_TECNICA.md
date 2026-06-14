@@ -1,4 +1,4 @@
-# FestGPT — Referencia de funciones Python
+# FestAI — Referencia de funciones Python
 
 Este documento explica cada función y variable del proyecto para alguien que quiera entender o modificar el código.
 
@@ -206,7 +206,7 @@ pregunta → get_context() → build_prompt() → generate_stream() → respuest
 
 Se construye al importar el módulo (antes del `if __name__ == "__main__"`). Componentes:
 
-- `gr.Blocks(title="FestGPT")` — contenedor principal.
+- `gr.Blocks(title="FestAI")` — contenedor principal.
 - `gr.Markdown(...)` — título.
 - `gr.Dropdown` — selector de festival, se rellena con `get_festivals()`.
 - `gr.Radio` — selector de fase, usa las claves de `PHASE_PROMPTS`.

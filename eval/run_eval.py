@@ -1,5 +1,5 @@
 """
-FestGPT — Evaluación comparativa de modelos LLM
+FestAI — Evaluación comparativa de modelos LLM
 ================================================
 Llama al mismo endpoint que la app (LLM_URL): detecta automáticamente
 formato chat (/v1/chat/completions, Ollama Cloud/OpenAI) o completions (vLLM).
@@ -283,7 +283,7 @@ def run_evaluation(model_aliases: list[str], benchmark_path: Path = BENCHMARK_PA
 # ─────────────────────────────────────────────
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="FestGPT — evaluación comparativa de modelos")
+    parser = argparse.ArgumentParser(description="FestAI — evaluación comparativa de modelos")
     parser.add_argument(
         "--models",
         nargs="+",

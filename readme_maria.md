@@ -5,7 +5,7 @@ date: "2026-03-29"
 output: html_document
 ---
 
-# FestGPT — Open Source Festival Assistant
+# FestAI — Open Source Festival Assistant
 
 This notebook creates a smart assistant that can answer questions about music festivals using only open-source tools. It is the first step to building a chatbot that gives helpful, accurate answers based on real festival information.
 

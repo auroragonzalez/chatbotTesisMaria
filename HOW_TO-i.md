@@ -1,8 +1,8 @@
-# FestGPT — Guía para personas que no saben programar
+# FestAI — Guía para personas que no saben programar
 
 ## ¿Qué es este proyecto?
 
-FestGPT es un **chatbot** (un asistente virtual con el que hablas por texto) especializado en festivales de música. Le preguntas algo sobre un festival —horarios, cómo llegar, qué llevar— y te responde basándose en documentos reales del festival, no en información inventada.
+FestAI es un **chatbot** (un asistente virtual con el que hablas por texto) especializado en festivales de música. Le preguntas algo sobre un festival —horarios, cómo llegar, qué llevar— y te responde basándose en documentos reales del festival, no en información inventada.
 
 Está pensado para que lo use el público de un festival desde el móvil, como si hablaras con un trabajador de información del festival, pero disponible 24 horas.
 
@@ -22,7 +22,7 @@ Así te da respuestas basadas en datos reales, no en lo que el modelo "cree" o "
 
 ### Los dos motores del chatbot
 
-FestGPT usa dos inteligencias artificiales distintas, cada una para una tarea:
+FestAI usa dos inteligencias artificiales distintas, cada una para una tarea:
 
 | Motor | qué hace | De dónde sale | ¿Necesita internet? |
 |---|---|---|---|
@@ -35,7 +35,7 @@ El redactor (Ollama Cloud) es el de pago. No está en tu ordenador: cada pregunt
 
 ### ¿Por qué no usa ChatGPT sin más?
 
-Porque ChatGPT (o cualquier otro modelo) cuando no se le da información específica, **alucina**: se inventa respuestas que suenan bien pero son falsas. FestGPT obliga al modelo a responder solo con los documentos que tú le has dado.
+Porque ChatGPT (o cualquier otro modelo) cuando no se le da información específica, **alucina**: se inventa respuestas que suenan bien pero son falsas. FestAI obliga al modelo a responder solo con los documentos que tú le has dado.
 
 ---
 
@@ -135,7 +135,7 @@ python app.py --ingest --festival warm_up
 python app.py
 ```
 
-Abre tu navegador en `http://localhost:7860` y ya puedes hablar con FestGPT.
+Abre tu navegador en `http://localhost:7860` y ya puedes hablar con FestAI.
 
 ---
 

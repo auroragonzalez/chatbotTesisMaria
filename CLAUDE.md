@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project overview
 
-FestGPT is a RAG-based chatbot for music festivals (Gradio UI + LangChain + ChromaDB + external LLM). The entire application is a single-file Python app (`app.py`, ~400 lines). It is part of a PhD thesis targeting a 2026 special issue on LLMs for tourism.
+FestAI is a RAG-based chatbot for music festivals (Gradio UI + LangChain + ChromaDB + external LLM). The entire application is a single-file Python app (`app.py`, ~400 lines). It is part of a PhD thesis targeting a 2026 special issue on LLMs for tourism.
 
 ## Common commands
 
@@ -55,7 +55,7 @@ The container runs the Gradio app on port 7860 with a healthcheck. It does **not
 
 **Two corpora**:
 - `festival_txts/` — the committed corpus and the default `DATA_DIR`. Three festivals: `animal_sound`, `mar_de_musicas`, `warm_up`, each with the four canonical topic files.
-- `festival_txts_big/` — an untracked, richer warm_up corpus (granular topic folders, plus `.csv`/`.jpg` assets and macOS junk like `__MACOSX/`/`.DS_Store`). Its real content lives one level down in `festival_txts_big/festival_txts/`. To use it, point `DATA_DIR` at that inner path and re-ingest; only `**/*.txt` is loaded (CSV/JPG are ignored).
+- `festival_txts_big/` — an untracked, richer **warm_up-only** corpus (granular topic folders, plus `.csv`/`.jpg` assets and `.DS_Store` macOS junk). Its content is exposed as a single festival folder `festival_txts_big/warm_up/` (310 `.txt` across topic subfolders: `bandas_warmup`, `horarios_warmup`, `alojamientos_warmup`, `salida_laverdad_warmup_tema`, etc.). To use it, set `DATA_DIR=./festival_txts_big` and re-ingest `warm_up`; only `**/*.txt` is loaded (CSV/JPG ignored). This is the **active corpus** in the local `.env`. Note: ~36 files under `warm_up/warm_up/` were originally Mac OS Roman encoded and have been converted to UTF-8; `ingest_corpus` also sets `autodetect_encoding=True` as a safety net.
 
 **Evaluation** (`eval/`): a **bilingual** benchmark pair — `qa_benchmark.json` (Spanish) and `qa_benchmark_en.json` (English), 17 questions each with identical `id`/`phase`/`category` (across phases + out-of-scope hallucination checks) — plus `run_eval.py` (ROUGE-L, BERTScore F1, latency, hallucination rate). Select the file with `--benchmark`; output CSVs are tagged with the benchmark stem. Hallucination detection recognizes "no info" phrasings in both languages. The app is bilingual: `SYSTEM_BASE` instructs the LLM to answer in the user's language (ES/EN), though the corpus itself is Spanish.
 

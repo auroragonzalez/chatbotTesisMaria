@@ -1,5 +1,5 @@
 """
-FestGPT — Production App
+FestAI — Production App
 ========================
 Uso:
   Lanzar el chatbot:
@@ -44,6 +44,14 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain_community.document_loaders import DirectoryLoader, TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+
+# Carga el archivo .env si está presente (las variables de entorno ya definidas
+# tienen prioridad, por lo que no interfiere con Docker u otros despliegues).
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 
 
 # ─────────────────────────────────────────────
@@ -131,7 +139,7 @@ PHASE_PROMPTS = {
 }
 
 SYSTEM_BASE = (
-    "Eres FestGPT, un asistente experto en festivales de música y turismo. "
+    "Eres FestAI, un asistente experto en festivales de música y turismo. "
     "Responde en el MISMO idioma en el que el usuario formule la pregunta (español o inglés) "
     "y SOLO con la información del contexto proporcionado. "
     "Si no tienes información suficiente, indícalo claramente en ese mismo idioma sin inventar datos."
@@ -169,7 +177,7 @@ def ingest_corpus(festival: str) -> None:
         str(source_dir),
         glob="**/*.txt",
         loader_cls=TextLoader,
-        loader_kwargs={"encoding": "utf-8"},
+        loader_kwargs={"encoding": "utf-8", "autodetect_encoding": True},
         show_progress=True,
     )
     docs = loader.load()
@@ -320,9 +328,9 @@ def chat(message: str, history: list, festival: str, phase: str):
 # GRADIO UI
 # ─────────────────────────────────────────────
 
-with gr.Blocks(title="FestGPT") as demo:
+with gr.Blocks(title="FestAI") as demo:
     gr.Markdown(
-        "# 🎵 FestGPT\n"
+        "# 🎵 FestAI\n"
         "Asistente inteligente para festivales de música · powered by RAG + open-source LLM"
     )
 
@@ -347,7 +355,7 @@ with gr.Blocks(title="FestGPT") as demo:
     gr.ChatInterface(
         fn=chat,
         additional_inputs=[festival_selector, phase_selector],
-        chatbot=gr.Chatbot(height=460, label="FestGPT"),
+        chatbot=gr.Chatbot(height=460, label="FestAI"),
         textbox=gr.Textbox(placeholder="Escribe tu pregunta sobre el festival...", label=""),
     )
 
@@ -357,7 +365,7 @@ with gr.Blocks(title="FestGPT") as demo:
 # ─────────────────────────────────────────────
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="FestGPT — asistente RAG para festivales")
+    parser = argparse.ArgumentParser(description="FestAI — asistente RAG para festivales")
     parser.add_argument(
         "--ingest",
         action="store_true",

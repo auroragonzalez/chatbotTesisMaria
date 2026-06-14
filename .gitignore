@@ -11,3 +11,13 @@ __MACOSX/
 
 # LibreOffice/OpenOffice lock files
 .~lock.*#
+
+# Entornos virtuales
+.venv/
+.venv-eval/
+
+# Backups del preprocesado de horarios (reversibles)
+*.orig
+
+# Intermedios de evaluación (regenerables; los resultados están en questions/*.xlsx)
+eval/festai_eval_*.json
