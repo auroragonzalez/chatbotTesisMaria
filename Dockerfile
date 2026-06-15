@@ -19,11 +19,6 @@ RUN chmod +x docker-entrypoint.sh
 # Es el mismo corpus que el .env local (DATA_DIR=./festival_txts_big).
 COPY festival_txts_big/ ./festival_txts_big/
 
-# ── Índice Chroma prehorneado (construido desde festival_txts_big) ────
-# Sirve como fallback si no se monta un volumen. El entrypoint lo
-# reconstruye si falta o si INGEST_ON_START=1.
-COPY chroma_db/ ./chroma_db/
-
 # ── Configuración CPU-only y rutas de datos ───────────────────────────
 ENV PYTHONUNBUFFERED=1
 ENV EMBEDDING_DEVICE=cpu

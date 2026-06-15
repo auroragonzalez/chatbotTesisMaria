@@ -1,5 +1,8 @@
 .env
 
+# Chroma index (artefacto generado; el contenedor lo reconstruye)
+chroma_db/
+
 # Python build artifacts
 __pycache__/
 *.pyc
