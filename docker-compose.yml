@@ -13,14 +13,23 @@ services:
     env_file:
       - .env
     volumes:
+      # Índice Chroma persistente (lectura/escritura: el entrypoint puede reingestar)
       - ./chroma_db:/app/chroma_db
-      - ./festival_txts:/app/festival_txts:ro
+      # Corpus de producción: el MISMO que usa el .env local
+      - ./festival_txts_big:/app/festival_txts_big:ro
     environment:
       PYTHONUNBUFFERED: "1"
       EMBEDDING_DEVICE: cpu
       SERVER_PORT: "7860"
       CHROMA_DIR: /app/chroma_db
-      DATA_DIR: /app/festival_txts
+      # Apunta al corpus grande (warm_up enriquecido), igual que en local.
+      # Estos valores explícitos tienen prioridad sobre el .env (env_file).
+      DATA_DIR: /app/festival_txts_big
+      # Fuerza reconstruir Chroma desde DATA_DIR al arrancar (útil tras
+      # cambiar el corpus). Se toma de la variable del shell; por defecto 0
+      # (usa el índice montado y solo ingesta si no existe). Para forzar:
+      #   INGEST_ON_START=1 docker compose up --build
+      INGEST_ON_START: ${INGEST_ON_START:-0}
     healthcheck:
       test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:7860/').read()\" || exit 1"]
       interval: 30s

@@ -1,0 +1,28 @@
+# ── Entornos virtuales y caché de Python ──────────────────────────────
+.venv
+.venv-eval
+__pycache__
+**/__pycache__
+*.pyc
+*.pyo
+
+# ── Git e historial ───────────────────────────────────────────────────
+.git
+.gitignore
+.Rhistory
+
+# ── Secretos (se inyectan en runtime vía env_file / -e, NO se hornean) ─
+.env
+
+# ── Corpus pequeño: NO se usa en producción (servimos festival_txts_big)
+festival_txts
+
+# ── Material que no necesita el contenedor ────────────────────────────
+eval
+questions
+scripts
+contexto
+festai_pipeline.ipynb
+*.pdf
+*.md
+docker-compose.yml
