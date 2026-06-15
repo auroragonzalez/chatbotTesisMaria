@@ -1,5 +1,4 @@
 .env
-chroma_db/
 
 # Python build artifacts
 __pycache__/
