@@ -30,7 +30,7 @@ python eval/run_eval.py --models phi3 salamandra mistral qwen
 ### Docker (production deployment)
 
 ```bash
-# Build + run; reads .env, mounts ./chroma_db and ./festival_txts, forces EMBEDDING_DEVICE=cpu
+# Build + run; reads .env (secrets only), mounts ./chroma_db and ./festival_txts_big; config in constants.py
 docker compose up --build
 ```
 
@@ -40,7 +40,7 @@ The container runs the Gradio app on port 7860 with a healthcheck. It does **not
 
 **Single-file app (`app.py`)** — also acts as a library imported by `eval/run_eval.py`. Key sections in order:
 
-1. **Config** (lines 53-68): all settings via `os.getenv` with defaults. Accepts both `LLM_URL` (primary) and `VLLM_URL` (fallback) for the LLM endpoint.
+1. **Config**: non-secret settings imported from `constants.py` and re-exposed at module level; secrets (`LLM_API_KEY`, `HF_TOKEN`) read from the environment / `.env`. See "Configuration" below.
 2. **Embeddings singleton** (line 144): `HuggingFaceEmbeddings` with `multilingual-e5-base` loads at **import time**, not lazily. This means any script that imports `app` pays the embedding model load cost immediately.
 3. **Corpus ingestion** (`ingest_corpus`): loads `.txt` files via `DirectoryLoader`, splits with `RecursiveCharacterTextSplitter`, stores in Chroma with one **collection per festival** (collection name = folder name). Deletes and rebuilds the collection on each run.
 4. **Retrieval** (`get_context`): similarity search returning top-k chunks from the festival's Chroma collection.
@@ -63,13 +63,12 @@ The container runs the Gradio app on port 7860 with a healthcheck. It does **not
 
 - `eval/run_eval.py` imports the embedding model singleton and config constants (`LLM_URL`, `LLM_API_KEY`, `MODEL_NAME`, etc.) from `app.py` at module level — so renaming a config constant in `app.py` breaks the eval import. (This already happened once: the Ollama Cloud refactor renamed `VLLM_URL`→`LLM_URL` and broke the eval `import` until fixed.) The embedding model loads on import, so running eval or any script that imports `app` requires the model to be cached in `~/.cache/huggingface/`.
 
-## Environment variables
+## Configuration
 
-All have defaults; see `.env.example`. Note the **code defaults differ from the shipped `.env.example`**: `app.py` defaults to local Ollama (`http://localhost:11434/v1/chat/completions`, `phi3:mini`), but `.env.example` configures **Ollama Cloud** (`https://ollama.com/v1/chat/completions`, `gemma3:27b-cloud`) — the intended production backend. The ones that change behavior most:
-- `LLM_URL` — endpoint for the chat API (code default: local Ollama; `.env.example`: Ollama Cloud). Also accepts `VLLM_URL` as a fallback name.
-- `MODEL_NAME` — model name sent to the LLM endpoint (code default: `phi3:mini`; `.env.example`: `gemma3:27b-cloud`)
-- `LLM_API_KEY` — API key for cloud providers, sent as `Authorization: Bearer` (also accepts `OLLAMA_API_KEY` as a fallback name). Required for Ollama Cloud.
-- `EMBEDDING_DEVICE` — `cuda` or `cpu` (Docker forces `cpu`)
-- `CHUNK_SIZE`, `CHUNK_OVERLAP`, `RETRIEVER_K` — RAG parameters
+Config is split in two:
+- **`constants.py`** — single source of truth for **all non-secret settings** (`LLM_URL`, `MODEL_NAME`, `EMBEDDING_MODEL`, `EMBEDDING_DEVICE`, `CHROMA_DIR`, `DATA_DIR`, `CHUNK_SIZE`, `CHUNK_OVERLAP`, `RETRIEVER_K`, `MAX_TOKENS`, `TEMPERATURE`, `SERVER_PORT`, `CUDA_VISIBLE_DEVICES`). These are **plain Python constants, not env-overridable** — intentional, to keep deployment deterministic (this is what previously broke when Docker overrode `DATA_DIR` to the wrong corpus). `app.py` imports them and re-exposes them at module level (so `eval/run_eval.py`'s import of `LLM_URL`/`MODEL_NAME`/etc. still works). Paths are relative to the working dir (project root locally, `/app` in the container), so they're valid in both.
+- **`.env`** (and `.env.example`) — **secrets only**: `LLM_API_KEY` (also accepts `OLLAMA_API_KEY`; sent as `Authorization: Bearer`) and `HF_TOKEN` (optional, for authenticated embedding-model download). Read via `os.getenv`. Loaded by `python-dotenv`.
 
-`generate_stream` picks the payload shape from the URL: `/v1/chat/completions` → OpenAI/Ollama chat format; anything else → vLLM `/v1/completions` format. Switching backends is purely a `LLM_URL`/`MODEL_NAME`/`LLM_API_KEY` change.
+To change the corpus, RAG params, model, or device, edit `constants.py` (not `.env`, not the Dockerfile/compose). After changing the corpus or chunking, re-ingest (`INGEST_ON_START=1 docker compose up --build`).
+
+`generate_stream` picks the payload shape from the URL: `/v1/chat/completions` → OpenAI/Ollama chat format; anything else → vLLM `/v1/completions` format. Switching backends is a `constants.py` (`LLM_URL`/`MODEL_NAME`) + `.env` (`LLM_API_KEY`) change.

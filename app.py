@@ -12,21 +12,11 @@ Uso:
     python app.py --ingest                     # todos los festivales en festival_txts/
     python app.py --ingest --festival warm_up  # solo uno
 
-Variables de entorno (todas tienen valor por defecto):
-  CUDA_VISIBLE_DEVICES  GPU a usar            (default: "0")
-  VLLM_URL              Endpoint vLLM         (default: http://localhost:8000/v1/completions)
-  MODEL_NAME            Modelo en vLLM        (default: microsoft/Phi-3-mini-4k-instruct)
-  EMBEDDING_MODEL       Modelo de embeddings  (default: intfloat/multilingual-e5-base)
-  EMBEDDING_DEVICE      CPU o CUDA            (default: cuda)
-  CHROMA_DIR            Ruta base del VectorDB(default: ./chroma_db)
-  DATA_DIR              Carpeta de corpus     (default: ./festival_txts)
-  CHUNK_SIZE            Tamaño de chunk       (default: 500)
-  CHUNK_OVERLAP         Solapamiento de chunk (default: 50)
-  RETRIEVER_K           Docs a recuperar      (default: 4)
-  MAX_TOKENS            Tokens de respuesta   (default: 512)
-  TEMPERATURE           Temperatura del LLM   (default: 0.3)
-  HF_TOKEN              Token de HuggingFace   (default: se pide por teclado si es necesario)
-  SERVER_PORT           Puerto de Gradio      (default: 7860)
+Configuración:
+  - Todos los ajustes NO secretos están en `constants.py` (versionados).
+  - Los SECRETOS se leen del entorno / `.env`:
+      LLM_API_KEY   Clave de API del LLM (Ollama Cloud). También acepta OLLAMA_API_KEY.
+      HF_TOKEN      Token de HuggingFace (si el modelo requiere descarga autenticada).
 """
 
 import os
@@ -38,6 +28,7 @@ import argparse
 import requests
 import gradio as gr
 from pathlib import Path
+import constants
 from huggingface_hub import snapshot_download
 from huggingface_hub.errors import LocalEntryNotFoundError
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -55,25 +46,29 @@ except ImportError:
 
 
 # ─────────────────────────────────────────────
-# CONFIG  (todas las variables son anulables con env vars)
+# CONFIG
+# Los ajustes NO secretos viven en constants.py (versionados, deterministas).
+# Del entorno (.env) SOLO se leen los secretos: LLM_API_KEY y HF_TOKEN.
 # ─────────────────────────────────────────────
 
-os.environ["CUDA_VISIBLE_DEVICES"] = os.getenv("CUDA_VISIBLE_DEVICES", "0")
+os.environ["CUDA_VISIBLE_DEVICES"] = constants.CUDA_VISIBLE_DEVICES
 
-LLM_URL          = os.getenv("LLM_URL",          os.getenv("VLLM_URL",         "http://localhost:11434/v1/chat/completions"))
-MODEL_NAME       = os.getenv("MODEL_NAME",        os.getenv("MODEL_NAME",        "phi3:mini"))
-EMBEDDING_MODEL  = os.getenv("EMBEDDING_MODEL",   "intfloat/multilingual-e5-base")
-EMBEDDING_DEVICE = os.getenv("EMBEDDING_DEVICE",  "cuda")
-CHROMA_DIR       = Path(os.getenv("CHROMA_DIR",   "./chroma_db"))
-DATA_DIR         = Path(os.getenv("DATA_DIR",     "./festival_txts_big"))
-CHUNK_SIZE       = int(os.getenv("CHUNK_SIZE",    "500"))
-CHUNK_OVERLAP    = int(os.getenv("CHUNK_OVERLAP", "50"))
-RETRIEVER_K      = int(os.getenv("RETRIEVER_K",   "4"))
-MAX_TOKENS       = int(os.getenv("MAX_TOKENS",    "512"))
-TEMPERATURE      = float(os.getenv("TEMPERATURE", "0.3"))
-SERVER_PORT      = int(os.getenv("SERVER_PORT",   "7860"))
-HF_TOKEN         = os.getenv("HF_TOKEN",          None)
-LLM_API_KEY      = os.getenv("LLM_API_KEY",       os.getenv("OLLAMA_API_KEY", None))
+LLM_URL          = constants.LLM_URL
+MODEL_NAME       = constants.MODEL_NAME
+EMBEDDING_MODEL  = constants.EMBEDDING_MODEL
+EMBEDDING_DEVICE = constants.EMBEDDING_DEVICE
+CHROMA_DIR       = Path(constants.CHROMA_DIR)
+DATA_DIR         = Path(constants.DATA_DIR)
+CHUNK_SIZE       = constants.CHUNK_SIZE
+CHUNK_OVERLAP    = constants.CHUNK_OVERLAP
+RETRIEVER_K      = constants.RETRIEVER_K
+MAX_TOKENS       = constants.MAX_TOKENS
+TEMPERATURE      = constants.TEMPERATURE
+SERVER_PORT      = constants.SERVER_PORT
+
+# ── Secretos: únicamente desde el entorno / .env ─────────────────────
+HF_TOKEN         = os.getenv("HF_TOKEN")
+LLM_API_KEY      = os.getenv("LLM_API_KEY", os.getenv("OLLAMA_API_KEY"))
 
 # ─────────────────────────────────────────────
 # MODEL DOWNLOAD

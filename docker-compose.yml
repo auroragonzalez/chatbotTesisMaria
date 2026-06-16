@@ -19,13 +19,8 @@ services:
       - ./festival_txts_big:/app/festival_txts_big:ro
     environment:
       PYTHONUNBUFFERED: "1"
-      EMBEDDING_DEVICE: cpu
-      SERVER_PORT: "7860"
-      CHROMA_DIR: /app/chroma_db
-      # Apunta al corpus grande (warm_up enriquecido), igual que en local.
-      # Estos valores explícitos tienen prioridad sobre el .env (env_file).
-      DATA_DIR: /app/festival_txts_big
-      # Fuerza reconstruir Chroma desde DATA_DIR al arrancar (útil tras
+      # Toda la configuración no secreta está en constants.py.
+      # Fuerza reconstruir Chroma desde el corpus al arrancar (útil tras
       # cambiar el corpus). Se toma de la variable del shell; por defecto 0
       # (usa el índice montado y solo ingesta si no existe). Para forzar:
       #   INGEST_ON_START=1 docker compose up --build

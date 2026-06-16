@@ -12,19 +12,17 @@ RUN pip install --no-cache-dir $(sed '/^torch/d; /^sentence-transformers/d; /^#/
 
 # ── Aplicación ────────────────────────────────────────────────────────
 COPY app.py .
+COPY constants.py .
 COPY docker-entrypoint.sh .
 RUN chmod +x docker-entrypoint.sh
 
 # ── Corpus de PRODUCCIÓN: festival_txts_big (warm_up enriquecido) ──────
-# Es el mismo corpus que el .env local (DATA_DIR=./festival_txts_big).
+# DATA_DIR=./festival_txts_big está fijado en constants.py.
 COPY festival_txts_big/ ./festival_txts_big/
 
-# ── Configuración CPU-only y rutas de datos ───────────────────────────
+# Toda la configuración (rutas, RAG, modelo, dispositivo) vive en
+# constants.py. Aquí solo lo estrictamente del runtime de Python.
 ENV PYTHONUNBUFFERED=1
-ENV EMBEDDING_DEVICE=cpu
-ENV SERVER_PORT=7860
-ENV CHROMA_DIR=/app/chroma_db
-ENV DATA_DIR=/app/festival_txts_big
 
 EXPOSE 7860
 
