@@ -24,6 +24,7 @@ import sys
 import json
 import time
 import getpass
+from datetime import datetime
 import argparse
 import requests
 import gradio as gr
@@ -65,6 +66,8 @@ RETRIEVER_K      = constants.RETRIEVER_K
 MAX_TOKENS       = constants.MAX_TOKENS
 TEMPERATURE      = constants.TEMPERATURE
 SERVER_PORT      = constants.SERVER_PORT
+DEFAULT_FESTIVAL      = constants.DEFAULT_FESTIVAL
+FESTIVAL_DISPLAY_NAME = constants.FESTIVAL_DISPLAY_NAME
 
 # ── Secretos: únicamente desde el entorno / .env ─────────────────────
 HF_TOKEN         = os.getenv("HF_TOKEN")
@@ -226,8 +229,19 @@ def get_context(query: str, festival: str) -> str:
 
 def build_prompt(context: str, question: str, phase: str) -> str:
     phase_instruction = PHASE_PROMPTS.get(phase, "")
+    # Supuestos para el caso de uso de un único festival: si el usuario no
+    # nombra festival, se asume WARM UP; si no especifica año/edición, se
+    # asume el año actual (dinámico).
+    defaults = (
+        f"SUPUESTOS POR DEFECTO: "
+        f"Si el usuario no menciona ningún festival, asume SIEMPRE que se refiere a "
+        f"{FESTIVAL_DISPLAY_NAME}. "
+        f"Si el usuario no especifica un año o edición, asume que se refiere al año actual "
+        f"({datetime.now().year})."
+    )
     return (
         f"{SYSTEM_BASE}\n\n"
+        f"{defaults}\n\n"
         f"Contexto de uso: {phase_instruction}\n\n"
         f"CONTEXTO DEL CORPUS:\n{context}\n\n"
         f"PREGUNTA: {question}\n\n"
@@ -306,6 +320,9 @@ def chat(message: str, history: list, festival: str, phase: str):
     if not message.strip():
         yield ""
         return
+
+    # Sin festival seleccionado -> se asume el festival por defecto (warm_up).
+    festival = festival or DEFAULT_FESTIVAL
 
     t0 = time.time()
     context  = get_context(message, festival)

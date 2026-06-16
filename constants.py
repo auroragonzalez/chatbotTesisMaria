@@ -29,6 +29,11 @@ EMBEDDING_DEVICE = "cpu"
 CHROMA_DIR = "./chroma_db"
 DATA_DIR   = "./festival_txts_big"
 
+# ── Caso de uso actual: un único festival ─────────────────────────────
+# Festival que se asume cuando el usuario no menciona ninguno.
+DEFAULT_FESTIVAL      = "warm_up"                      # carpeta / colección Chroma
+FESTIVAL_DISPLAY_NAME = "WARM UP Estrella de Levante"  # nombre legible para el prompt
+
 # ── RAG ────────────────────────────────────────────────────────────────
 CHUNK_SIZE    = 1200
 CHUNK_OVERLAP = 150
