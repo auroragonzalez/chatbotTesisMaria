@@ -20,6 +20,7 @@ Configuración:
 """
 
 import os
+import re
 import sys
 import json
 import time
@@ -208,6 +209,23 @@ def ingest_corpus(festival: str) -> None:
 # RETRIEVAL
 # ─────────────────────────────────────────────
 
+_YEAR_RE = re.compile(r"\b20\d{2}\b")
+
+
+def augment_query(query: str) -> str:
+    """
+    Sesga la consulta de recuperación hacia la edición vigente.
+
+    El corpus contiene varias ediciones (p. ej. noticias de 2024/2025 además
+    del horario de 2026). Si la pregunta NO menciona un año, le añadimos el año
+    actual para que el retriever priorice los chunks de esa edición en lugar de
+    mezclar años antiguos. Si la pregunta ya trae un año, se respeta tal cual.
+    """
+    if _YEAR_RE.search(query):
+        return query
+    return f"{query} {datetime.now().year}"
+
+
 def get_context(query: str, festival: str) -> str:
     """Recupera los chunks más relevantes del corpus del festival indicado."""
     db = Chroma(
@@ -219,7 +237,7 @@ def get_context(query: str, festival: str) -> str:
         search_type="similarity",
         search_kwargs={"k": RETRIEVER_K},
     )
-    docs = retriever.invoke(query)
+    docs = retriever.invoke(augment_query(query))
     return "\n\n".join(d.page_content for d in docs)
 
 
@@ -231,13 +249,18 @@ def build_prompt(context: str, question: str, phase: str) -> str:
     phase_instruction = PHASE_PROMPTS.get(phase, "")
     # Supuestos para el caso de uso de un único festival: si el usuario no
     # nombra festival, se asume WARM UP; si no especifica año/edición, se
-    # asume el año actual (dinámico).
+    # asume el año actual (dinámico) y no se mezclan ediciones.
+    current_year = datetime.now().year
     defaults = (
-        f"SUPUESTOS POR DEFECTO: "
-        f"Si el usuario no menciona ningún festival, asume SIEMPRE que se refiere a "
-        f"{FESTIVAL_DISPLAY_NAME}. "
-        f"Si el usuario no especifica un año o edición, asume que se refiere al año actual "
-        f"({datetime.now().year})."
+        f"SUPUESTOS POR DEFECTO (caso de un único festival):\n"
+        f"- Si el usuario no menciona ningún festival, asume SIEMPRE que se refiere a "
+        f"{FESTIVAL_DISPLAY_NAME}.\n"
+        f"- Si el usuario no especifica un año o edición, responde EXCLUSIVAMENTE sobre el "
+        f"año actual ({current_year}).\n"
+        f"- El CONTEXTO puede incluir información de varias ediciones (años). Usa solo la del "
+        f"año relevante para la pregunta (por defecto, {current_year}) y NO mezcles datos de "
+        f"otros años salvo que el usuario lo pida de forma explícita. Si en el contexto no hay "
+        f"información de ese año, dilo claramente en lugar de responder con otro año."
     )
     return (
         f"{SYSTEM_BASE}\n\n"
