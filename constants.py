@@ -42,4 +42,4 @@ MAX_TOKENS    = 1500
 TEMPERATURE   = 0.3
 
 # ── Servidor Gradio ────────────────────────────────────────────────────
-SERVER_PORT = 7860
+SERVER_PORT = 8000
