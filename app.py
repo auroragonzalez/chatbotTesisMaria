@@ -256,19 +256,22 @@ def augment_query(query: str) -> str:
 
 
 def _last_user_turn(history: list | None) -> str:
-    """Devuelve el último mensaje del usuario en el historial, si lo hay.
+    """Devuelve el ÚLTIMO mensaje del usuario en el historial, si lo hay.
 
-    Soporta los dos formatos de historial de Gradio: lista de pares
-    [user, bot] (formato 'tuples') y lista de dicts {role, content}
-    (formato 'messages').
+    Soporta los dos formatos de historial de Gradio y recorre el historial de
+    atrás hacia delante para localizar el turno del usuario:
+      - 'tuples'   : lista de pares [user, bot]  → el user es el elemento [0].
+      - 'messages' : lista de dicts {role, content}. Aquí el ÚLTIMO elemento es
+        la respuesta del asistente, no la pregunta, así que hay que buscar el
+        último dict con role == 'user' (no vale con mirar history[-1]).
     """
     if not history:
         return ""
-    last = history[-1]
-    if isinstance(last, (list, tuple)) and last:
-        return str(last[0] or "")
-    if isinstance(last, dict) and last.get("role") == "user":
-        return str(last.get("content") or "")
+    for item in reversed(history):
+        if isinstance(item, (list, tuple)) and item:
+            return str(item[0] or "")
+        if isinstance(item, dict) and item.get("role") == "user":
+            return str(item.get("content") or "")
     return ""
 
 
@@ -491,7 +494,7 @@ with gr.Blocks(title="FestAI") as demo:
     gr.ChatInterface(
         fn=chat,
         additional_inputs=[festival_selector, phase_selector],
-        chatbot=gr.Chatbot(height=460, label="FestAI"),
+        chatbot=gr.Chatbot(height=460, label="FestAI", type="messages"),
         textbox=gr.Textbox(placeholder="Escribe tu pregunta sobre el festival...", label=""),
     )
 

@@ -14,7 +14,13 @@ langchain-text-splitters>=0.2.0
 chromadb>=0.5.0
 
 # Production app
-gradio>=4.0.0
+# Gradio FIJADO a una versión concreta para builds reproducibles y para que el
+# frontend servido coincida siempre con el backend. Con `>=4.0.0` cada rebuild
+# instalaba una versión distinta (llegó a Gradio 6.x); el desajuste frontend/
+# backend hacía que el mensaje llegara como None y reventara con
+# `AttributeError: 'NoneType' object has no attribute 'get'`.
+# 5.50.0: estable, compatible con el huggingface_hub actual (4.x rompe por HfFolder).
+gradio==5.50.0
 requests>=2.31.0
 python-dotenv>=1.0.0   
 # carga .env en app.py (load_dotenv)
