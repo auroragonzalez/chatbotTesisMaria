@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "rouge_l": 0.3133,
+    "bertscore_f1": 0.6986
+  },
+  {
+    "id": 2,
+    "rouge_l": 0.1463,
+    "bertscore_f1": 0.617
+  },
+  {
+    "id": 3,
+    "rouge_l": 0.1905,
+    "bertscore_f1": 0.5529
+  },
+  {
+    "id": 4,
+    "rouge_l": 0.0734,
+    "bertscore_f1": 0.5398
+  },
+  {
+    "id": 5,
+    "rouge_l": 0.1739,
+    "bertscore_f1": 0.6559
+  },
+  {
+    "id": 6,
+    "rouge_l": 0.1513,
+    "bertscore_f1": 0.6141
+  },
+  {
+    "id": 8,
+    "rouge_l": 0.176,
+    "bertscore_f1": 0.6208
+  },
+  {
+    "id": 9,
+    "rouge_l": 0.6829,
+    "bertscore_f1": 0.8464
+  },
+  {
+    "id": 10,
+    "rouge_l": 0.3971,
+    "bertscore_f1": 0.8188
+  },
+  {
+    "id": 11,
+    "rouge_l": 0.202,
+    "bertscore_f1": 0.5605
+  },
+  {
+    "id": 12,
+    "rouge_l": 0.1807,
+    "bertscore_f1": 0.6657
+  },
+  {
+    "id": 14,
+    "rouge_l": 0.6903,
+    "bertscore_f1": 0.7983
+  },
+  {
+    "id": 15,
+    "rouge_l": 0.2621,
+    "bertscore_f1": 0.6388
+  },
+  {
+    "id": 17,
+    "rouge_l": 0.0723,
+    "bertscore_f1": 0.6283
+  },
+  {
+    "id": 18,
+    "rouge_l": 0.3333,
+    "bertscore_f1": 0.6687
+  },
+  {
+    "id": 19,
+    "rouge_l": 0.112,
+    "bertscore_f1": 0.5445
+  },
+  {
+    "id": 20,
+    "rouge_l": 0.1406,
+    "bertscore_f1": 0.6218
+  },
+  {
+    "id": 21,
+    "rouge_l": 0.0735,
+    "bertscore_f1": 0.5593
+  },
+  {
+    "id": 22,
+    "rouge_l": 0.2236,
+    "bertscore_f1": 0.6491
+  },
+  {
+    "id": 23,
+    "rouge_l": 0.1404,
+    "bertscore_f1": 0.6145
+  },
+  {
+    "id": 24,
+    "rouge_l": 0.1982,
+    "bertscore_f1": 0.6637
+  },
+  {
+    "id": 25,
+    "rouge_l": 0.198,
+    "bertscore_f1": 0.6854
+  },
+  {
+    "id": 26,
+    "rouge_l": 0.4737,
+    "bertscore_f1": 0.763
+  },
+  {
+    "id": 28,
+    "rouge_l": 0.1558,
+    "bertscore_f1": 0.5868
+  },
+  {
+    "id": 29,
+    "rouge_l": 0.0556,
+    "bertscore_f1": 0.6191
+  },
+  {
+    "id": 30,
+    "rouge_l": 0.0769,
+    "bertscore_f1": 0.6157
+  },
+  {
+    "id": 31,
+    "rouge_l": 0.0242,
+    "bertscore_f1": 0.5322
+  },
+  {
+    "id": 32,
+    "rouge_l": 0.0822,
+    "bertscore_f1": 0.6265
+  },
+  {
+    "id": 33,
+    "rouge_l": 0.1951,
+    "bertscore_f1": 0.7081
+  },
+  {
+    "id": 34,
+    "rouge_l": 0.0971,
+    "bertscore_f1": 0.6591
+  },
+  {
+    "id": 35,
+    "rouge_l": 0.0674,
+    "bertscore_f1": 0.6306
+  },
+  {
+    "id": 36,
+    "rouge_l": 0.4724,
+    "bertscore_f1": 0.7051
+  },
+  {
+    "id": 37,
+    "rouge_l": 0.0734,
+    "bertscore_f1": 0.6138
+  },
+  {
+    "id": 38,
+    "rouge_l": 0.0696,
+    "bertscore_f1": 0.6115
+  },
+  {
+    "id": 39,
+    "rouge_l": 0.0759,
+    "bertscore_f1": 0.5625
+  },
+  {
+    "id": 40,
+    "rouge_l": 0.0784,
+    "bertscore_f1": 0.653
+  },
+  {
+    "id": 41,
+    "rouge_l": 0.0531,
+    "bertscore_f1": 0.5666
+  },
+  {
+    "id": 42,
+    "rouge_l": 0.1143,
+    "bertscore_f1": 0.5893
+  },
+  {
+    "id": 43,
+    "rouge_l": 0.2708,
+    "bertscore_f1": 0.7127
+  },
+  {
+    "id": 44,
+    "rouge_l": 0.4203,
+    "bertscore_f1": 0.704
+  },
+  {
+    "id": 45,
+    "rouge_l": 0.0833,
+    "bertscore_f1": 0.6075
+  },
+  {
+    "id": 46,
+    "rouge_l": 0.0364,
+    "bertscore_f1": 0.5834
+  },
+  {
+    "id": 47,
+    "rouge_l": 0.1389,
+    "bertscore_f1": 0.5547
+  },
+  {
+    "id": 48,
+    "rouge_l": 0.2444,
+    "bertscore_f1": 0.6632
+  },
+  {
+    "id": 49,
+    "rouge_l": 0.1582,
+    "bertscore_f1": 0.5821
+  },
+  {
+    "id": 51,
+    "rouge_l": 0.1582,
+    "bertscore_f1": 0.6615
+  },
+  {
+    "id": 53,
+    "rouge_l": 0.1622,
+    "bertscore_f1": 0.626
+  },
+  {
+    "id": 54,
+    "rouge_l": 0.2656,
+    "bertscore_f1": 0.5688
+  },
+  {
+    "id": 55,
+    "rouge_l": 0.1333,
+    "bertscore_f1": 0.5393
+  },
+  {
+    "id": 56,
+    "rouge_l": 0.1333,
+    "bertscore_f1": 0.626
+  },
+  {
+    "id": 57,
+    "rouge_l": 0.1546,
+    "bertscore_f1": 0.6444
+  },
+  {
+    "id": 58,
+    "rouge_l": 0.3143,
+    "bertscore_f1": 0.6639
+  },
+  {
+    "id": 59,
+    "rouge_l": 0.0759,
+    "bertscore_f1": 0.6147
+  },
+  {
+    "id": 60,
+    "rouge_l": 0.1356,
+    "bertscore_f1": 0.5463
+  },
+  {
+    "id": 61,
+    "rouge_l": 0.1117,
+    "bertscore_f1": 0.6126
+  },
+  {
+    "id": 63,
+    "rouge_l": 0.1404,
+    "bertscore_f1": 0.6759
+  },
+  {
+    "id": 64,
+    "rouge_l": 0.1163,
+    "bertscore_f1": 0.625
+  },
+  {
+    "id": 66,
+    "rouge_l": 0.1415,
+    "bertscore_f1": 0.6593
+  },
+  {
+    "id": 67,
+    "rouge_l": 0.1714,
+    "bertscore_f1": 0.6854
+  },
+  {
+    "id": 68,
+    "rouge_l": 0.1257,
+    "bertscore_f1": 0.5693
+  },
+  {
+    "id": 69,
+    "rouge_l": 0.2212,
+    "bertscore_f1": 0.6667
+  },
+  {
+    "id": 70,
+    "rouge_l": 0.1081,
+    "bertscore_f1": 0.6866
+  },
+  {
+    "id": 71,
+    "rouge_l": 0.1833,
+    "bertscore_f1": 0.6164
+  },
+  {
+    "id": 72,
+    "rouge_l": 0.1611,
+    "bertscore_f1": 0.5991
+  },
+  {
+    "id": 73,
+    "rouge_l": 0.1628,
+    "bertscore_f1": 0.521
+  },
+  {
+    "id": 74,
+    "rouge_l": 0.129,
+    "bertscore_f1": 0.552
+  },
+  {
+    "id": 75,
+    "rouge_l": 0.1217,
+    "bertscore_f1": 0.6449
+  },
+  {
+    "id": 76,
+    "rouge_l": 0.1573,
+    "bertscore_f1": 0.6385
+  },
+  {
+    "id": 77,
+    "rouge_l": 0.1136,
+    "bertscore_f1": 0.5939
+  },
+  {
+    "id": 78,
+    "rouge_l": 0.2634,
+    "bertscore_f1": 0.6863
+  },
+  {
+    "id": 79,
+    "rouge_l": 0.1781,
+    "bertscore_f1": 0.5618
+  },
+  {
+    "id": 80,
+    "rouge_l": 0.1257,
+    "bertscore_f1": 0.5605
+  }
+]

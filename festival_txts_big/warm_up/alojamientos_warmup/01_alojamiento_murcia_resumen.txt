@@ -1,8 +1,8 @@
 [CATEGORY]: ALOJAMIENTO_RESUMEN
 [SOURCE]: https://www.turismodemurcia.es/es/alojamiento
 
-=== TIPOS DE ALOJAMIENTO DISPONIBLES EN MURCIA ===
-En la página oficial de Turismo de Murcia aparecen distintas categorías de alojamiento. En esta extracción se han detectado: CAMPING/ALBERGUE: 32; CASA RURAL: 4.
+=== OPCIONES Y TIPOS DE ALOJAMIENTO CERCA DE LA FICA / EN MURCIA ===
+Para buscar alojamiento cerca del recinto La Fica conviene alojarse en Murcia ciudad. En la página oficial de Turismo de Murcia aparecen 32 alojamientos y 4 casas rurales disponibles. Puedes consultar y reservar más opciones en: https://www.turismodemurcia.es/es/alojamiento
 
 === ZONAS RECOMENDABLES SI VAS AL WARM UP ===
 Para asistentes al Warm Up, conviene priorizar alojamientos en Murcia ciudad, especialmente centro urbano o zonas bien conectadas.

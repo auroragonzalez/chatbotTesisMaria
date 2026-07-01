@@ -1,0 +1,290 @@
+[
+  {
+    "id": 1,
+    "context_precision": 0.9584
+  },
+  {
+    "id": 2,
+    "context_precision": 1.0
+  },
+  {
+    "id": 3,
+    "context_precision": 0.718
+  },
+  {
+    "id": 4,
+    "context_precision": 0.6303
+  },
+  {
+    "id": 5,
+    "context_precision": 0.9101
+  },
+  {
+    "id": 6,
+    "context_precision": 0.6147
+  },
+  {
+    "id": 8,
+    "context_precision": 0.0
+  },
+  {
+    "id": 9,
+    "context_precision": 0.7372
+  },
+  {
+    "id": 10,
+    "context_precision": 0.6058
+  },
+  {
+    "id": 11,
+    "context_precision": 0.04
+  },
+  {
+    "id": 12,
+    "context_precision": 0.5426
+  },
+  {
+    "id": 14,
+    "context_precision": 0.8333
+  },
+  {
+    "id": 15,
+    "context_precision": 0.9127
+  },
+  {
+    "id": 17,
+    "context_precision": 1.0
+  },
+  {
+    "id": 18,
+    "context_precision": 1.0
+  },
+  {
+    "id": 19,
+    "context_precision": 0.8909
+  },
+  {
+    "id": 20,
+    "context_precision": 0.0
+  },
+  {
+    "id": 21,
+    "context_precision": 0.3688
+  },
+  {
+    "id": 22,
+    "context_precision": 0.9155
+  },
+  {
+    "id": 23,
+    "context_precision": 1.0
+  },
+  {
+    "id": 24,
+    "context_precision": 0.989
+  },
+  {
+    "id": 25,
+    "context_precision": 0.9426
+  },
+  {
+    "id": 26,
+    "context_precision": 0.9049
+  },
+  {
+    "id": 28,
+    "context_precision": 0.7563
+  },
+  {
+    "id": 29,
+    "context_precision": 1.0
+  },
+  {
+    "id": 30,
+    "context_precision": 0.4839
+  },
+  {
+    "id": 31,
+    "context_precision": 0.8667
+  },
+  {
+    "id": 32,
+    "context_precision": 0.5417
+  },
+  {
+    "id": 33,
+    "context_precision": 0.5927
+  },
+  {
+    "id": 34,
+    "context_precision": 0.2381
+  },
+  {
+    "id": 35,
+    "context_precision": 0.3922
+  },
+  {
+    "id": 36,
+    "context_precision": 0.6111
+  },
+  {
+    "id": 37,
+    "context_precision": 0.9708
+  },
+  {
+    "id": 38,
+    "context_precision": 0.1588
+  },
+  {
+    "id": 39,
+    "context_precision": 0.0667
+  },
+  {
+    "id": 40,
+    "context_precision": 0.9982
+  },
+  {
+    "id": 41,
+    "context_precision": 0.8329
+  },
+  {
+    "id": 42,
+    "context_precision": 0.2527
+  },
+  {
+    "id": 43,
+    "context_precision": 0.9767
+  },
+  {
+    "id": 44,
+    "context_precision": 0.9948
+  },
+  {
+    "id": 45,
+    "context_precision": 0.1974
+  },
+  {
+    "id": 46,
+    "context_precision": 0.6876
+  },
+  {
+    "id": 47,
+    "context_precision": 0.8222
+  },
+  {
+    "id": 48,
+    "context_precision": 0.8333
+  },
+  {
+    "id": 49,
+    "context_precision": 0.8666
+  },
+  {
+    "id": 51,
+    "context_precision": 1.0
+  },
+  {
+    "id": 53,
+    "context_precision": 0.54
+  },
+  {
+    "id": 54,
+    "context_precision": 0.6192
+  },
+  {
+    "id": 55,
+    "context_precision": 0.4101
+  },
+  {
+    "id": 56,
+    "context_precision": 0.3333
+  },
+  {
+    "id": 57,
+    "context_precision": 0.0
+  },
+  {
+    "id": 58,
+    "context_precision": 1.0
+  },
+  {
+    "id": 59,
+    "context_precision": 0.596
+  },
+  {
+    "id": 60,
+    "context_precision": 0.5041
+  },
+  {
+    "id": 61,
+    "context_precision": 0.1111
+  },
+  {
+    "id": 63,
+    "context_precision": 0.5446
+  },
+  {
+    "id": 64,
+    "context_precision": 0.05
+  },
+  {
+    "id": 66,
+    "context_precision": 0.8398
+  },
+  {
+    "id": 67,
+    "context_precision": 0.9215
+  },
+  {
+    "id": 68,
+    "context_precision": 0.1685
+  },
+  {
+    "id": 69,
+    "context_precision": 0.384
+  },
+  {
+    "id": 70,
+    "context_precision": 0.4393
+  },
+  {
+    "id": 71,
+    "context_precision": 0.6757
+  },
+  {
+    "id": 72,
+    "context_precision": 0.0817
+  },
+  {
+    "id": 73,
+    "context_precision": 0.1
+  },
+  {
+    "id": 74,
+    "context_precision": 0.4111
+  },
+  {
+    "id": 75,
+    "context_precision": 0.0
+  },
+  {
+    "id": 76,
+    "context_precision": 0.3381
+  },
+  {
+    "id": 77,
+    "context_precision": 0.0
+  },
+  {
+    "id": 78,
+    "context_precision": 0.0
+  },
+  {
+    "id": 79,
+    "context_precision": 0.3966
+  },
+  {
+    "id": 80,
+    "context_precision": 0.1668
+  }
+]

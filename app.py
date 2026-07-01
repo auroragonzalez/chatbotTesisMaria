@@ -64,6 +64,7 @@ DATA_DIR         = Path(constants.DATA_DIR)
 CHUNK_SIZE       = constants.CHUNK_SIZE
 CHUNK_OVERLAP    = constants.CHUNK_OVERLAP
 RETRIEVER_K      = constants.RETRIEVER_K
+INGEST_EXCLUDE_GLOBS = getattr(constants, "INGEST_EXCLUDE_GLOBS", [])
 MAX_TOKENS       = constants.MAX_TOKENS
 TEMPERATURE      = constants.TEMPERATURE
 SERVER_PORT      = constants.SERVER_PORT
@@ -139,9 +140,13 @@ PHASE_PROMPTS = {
 
 SYSTEM_BASE = (
     "Eres FestAI, un asistente experto en festivales de música y turismo. "
-    "Responde en el MISMO idioma en el que el usuario formule la pregunta (español o inglés) "
-    "y SOLO con la información del contexto proporcionado. "
-    "Si no tienes información suficiente, indícalo claramente en ese mismo idioma sin inventar datos."
+    "Usa SOLO la información del contexto proporcionado. "
+    "IDIOMA: responde SIEMPRE en el mismo idioma en el que está escrita la PREGUNTA del usuario. "
+    "Si la pregunta está en inglés, responde en inglés; si está en español, en español. "
+    "El contexto está en español: cuando la pregunta sea en inglés, traduce tu respuesta por "
+    "completo al inglés (sin dejar palabras ni encabezados en español), pero conserva sin traducir "
+    "los nombres propios, direcciones, teléfonos, URLs y horas tal como aparecen. "
+    "Si no tienes información suficiente, indícalo claramente en el idioma de la pregunta sin inventar datos."
 )
 
 
@@ -149,12 +154,33 @@ SYSTEM_BASE = (
 # EMBEDDINGS (singleton; se carga una sola vez)
 # ─────────────────────────────────────────────
 
+class _E5PrefixedEmbeddings(HuggingFaceEmbeddings):
+    """Embeddings e5 con los prefijos que el modelo espera.
+
+    Los modelos de la familia `intfloat/(multilingual-)e5-*` fueron entrenados
+    anteponiendo `query: ` a las consultas y `passage: ` a los documentos. Sin
+    estos prefijos el modelo rinde por debajo de su capacidad, y el rendimiento
+    entre idiomas (una pregunta en inglés sobre un corpus en español) es peor.
+    Aplicarlos de forma consistente en ingesta y consulta mejora la
+    recuperación en ambos idiomas y en el cruce ES<->EN.
+    """
+
+    def embed_documents(self, texts):
+        return super().embed_documents([f"passage: {t}" for t in texts])
+
+    def embed_query(self, text):
+        return super().embed_query(f"query: {text}")
+
+
 print("[startup] Loading embedding model...", flush=True)
-embedding_model = HuggingFaceEmbeddings(
+# Usa los prefijos solo con modelos e5 (para los que el prefijo es obligatorio);
+# con cualquier otro modelo se emplea el embedding estándar sin prefijos.
+_EmbeddingsCls = _E5PrefixedEmbeddings if "e5" in EMBEDDING_MODEL.lower() else HuggingFaceEmbeddings
+embedding_model = _EmbeddingsCls(
     model_name=EMBEDDING_MODEL,
     model_kwargs={"device": EMBEDDING_DEVICE},
 )
-print("[startup] Embedding model loaded ✓", flush=True)
+print(f"[startup] Embedding model loaded ✓ (prefijos e5: {_EmbeddingsCls is _E5PrefixedEmbeddings})", flush=True)
 
 
 # ─────────────────────────────────────────────
@@ -172,9 +198,12 @@ def ingest_corpus(festival: str) -> None:
         raise FileNotFoundError(f"No existe la carpeta de corpus: {source_dir.resolve()}")
 
     print(f"[ingest:{festival}] Cargando documentos desde {source_dir} ...")
+    if INGEST_EXCLUDE_GLOBS:
+        print(f"[ingest:{festival}] Exclusiones: {INGEST_EXCLUDE_GLOBS}")
     loader = DirectoryLoader(
         str(source_dir),
         glob="**/*.txt",
+        exclude=INGEST_EXCLUDE_GLOBS,
         loader_cls=TextLoader,
         loader_kwargs={"encoding": "utf-8", "autodetect_encoding": True},
         show_progress=True,
@@ -226,8 +255,36 @@ def augment_query(query: str) -> str:
     return f"{query} {datetime.now().year}"
 
 
-def get_context(query: str, festival: str) -> str:
-    """Recupera los chunks más relevantes del corpus del festival indicado."""
+def _last_user_turn(history: list | None) -> str:
+    """Devuelve el último mensaje del usuario en el historial, si lo hay.
+
+    Soporta los dos formatos de historial de Gradio: lista de pares
+    [user, bot] (formato 'tuples') y lista de dicts {role, content}
+    (formato 'messages').
+    """
+    if not history:
+        return ""
+    last = history[-1]
+    if isinstance(last, (list, tuple)) and last:
+        return str(last[0] or "")
+    if isinstance(last, dict) and last.get("role") == "user":
+        return str(last.get("content") or "")
+    return ""
+
+
+def get_context(query: str, festival: str, history: list | None = None) -> str:
+    """Recupera los chunks más relevantes del corpus del festival indicado.
+
+    Usa búsqueda por similitud (top-k). La completitud de las respuestas se
+    garantiza en el corpus: cada tema cuyo contenido estaría disperso (p. ej.
+    'cómo llegar' → avión + tren + autobús + carretera, o el cartel diario con
+    sus 4 escenarios) está consolidado en una única ficha que cabe en un chunk,
+    de modo que un solo chunk relevante responde de forma completa.
+
+    Para preguntas de seguimiento ('¿y en el escenario X?'), se antepone el
+    último mensaje del usuario a la consulta de recuperación, de modo que el
+    día/tema de la pregunta previa se mantenga en el contexto recuperado.
+    """
     db = Chroma(
         collection_name=festival,
         persist_directory=str(CHROMA_DIR),
@@ -237,7 +294,9 @@ def get_context(query: str, festival: str) -> str:
         search_type="similarity",
         search_kwargs={"k": RETRIEVER_K},
     )
-    docs = retriever.invoke(augment_query(query))
+    prev = _last_user_turn(history)
+    retrieval_query = f"{prev} {query}".strip() if prev else query
+    docs = retriever.invoke(augment_query(retrieval_query))
     return "\n\n".join(d.page_content for d in docs)
 
 
@@ -245,8 +304,18 @@ def get_context(query: str, festival: str) -> str:
 # PROMPT
 # ─────────────────────────────────────────────
 
-def build_prompt(context: str, question: str, phase: str) -> str:
+def build_prompt(context: str, question: str, phase: str, history: list | None = None) -> str:
     phase_instruction = PHASE_PROMPTS.get(phase, "")
+    # Turno anterior del usuario: se incluye en el prompt para que el LLM pueda
+    # resolver referencias de las preguntas de seguimiento ('¿y en el escenario
+    # X?') heredando el día/tema. (El historial ya se usa en la recuperación;
+    # aquí se hace además visible al modelo en el momento de generar.)
+    prev_turn = _last_user_turn(history)
+    prev_block = (
+        f"TURNO ANTERIOR DEL USUARIO (para resolver referencias de seguimiento como "
+        f"'y en...', heredando el día o el tema): {prev_turn}\n\n"
+        if prev_turn else ""
+    )
     # Supuestos para el caso de uso de un único festival: si el usuario no
     # nombra festival, se asume WARM UP; si no especifica año/edición, se
     # asume el año actual (dinámico) y no se mezclan ediciones.
@@ -262,12 +331,44 @@ def build_prompt(context: str, question: str, phase: str) -> str:
         f"otros años salvo que el usuario lo pida de forma explícita. Si en el contexto no hay "
         f"información de ese año, dilo claramente en lugar de responder con otro año."
     )
+    completeness = (
+        "REGLAS DE COMPLETITUD Y FIABILIDAD:\n"
+        "- RESPONDE SOLO A LO QUE SE PREGUNTA, de forma directa y concisa. NO "
+        "vuelques todo el contexto ni añadas información no solicitada (p. ej. no "
+        "incluyas consulados, aparcamiento, agenda de otros eventos, aniversarios, "
+        "etc. salvo que la pregunta lo pida). No añadas comentarios meta sobre el "
+        "proceso de traducción ni preámbulos: ve directo a la respuesta.\n"
+        "- CARTEL / HORARIOS: el festival tiene CUATRO escenarios "
+        "(Estrella de Levante, ElPozo King Upp, Ballantine's y ESC). Cuando la "
+        "pregunta sea sobre quién toca o qué bandas actúan un día (o sobre el "
+        "cartel), enumera SIEMPRE los cuatro escenarios con sus artistas y horas; "
+        "si en el contexto falta alguno, indícalo en vez de omitirlo en silencio.\n"
+        "- La ficha de HORARIO OFICIAL (con las horas de actuación por escenario) "
+        "es la fuente autoritativa del cartel: si está presente en el contexto, "
+        "usa SUS horas por artista. No respondas que no dispones de las horas ni "
+        "te bases solo en biografías de artistas cuando el horario oficial está "
+        "en el contexto.\n"
+        "- CÓMO LLEGAR: menciona TODOS los medios de transporte presentes en el "
+        "contexto (avión, tren, autobús y carretera), no solo uno.\n"
+        "- CLIMA / TIEMPO: responde con los datos de clima general (medias, horas "
+        "de sol) de las fichas oficiales. NO des previsiones meteorológicas "
+        "concretas (porcentajes de lluvia, alertas, pronósticos por día) salvo "
+        "que el contexto las indique explícitamente para la edición preguntada; "
+        "como mucho, señala que en ediciones anteriores ha llovido en algún momento.\n"
+        "- No inventes datos que no estén en el contexto."
+    )
     return (
         f"{SYSTEM_BASE}\n\n"
         f"{defaults}\n\n"
+        f"{completeness}\n\n"
         f"Contexto de uso: {phase_instruction}\n\n"
+        f"{prev_block}"
         f"CONTEXTO DEL CORPUS:\n{context}\n\n"
         f"PREGUNTA: {question}\n\n"
+        f"INSTRUCCIÓN FINAL: responde a la PREGUNTA anterior en su MISMO idioma "
+        f"(si la pregunta está en inglés, responde íntegramente en inglés; si está "
+        f"en español, en español), de forma directa y sin repetir literalmente estas "
+        f"instrucciones ni las cabeceras del contexto.\n\n"
         f"RESPUESTA:"
     )
 
@@ -348,8 +449,8 @@ def chat(message: str, history: list, festival: str, phase: str):
     festival = festival or DEFAULT_FESTIVAL
 
     t0 = time.time()
-    context  = get_context(message, festival)
-    prompt   = build_prompt(context, message, phase)
+    context  = get_context(message, festival, history)
+    prompt   = build_prompt(context, message, phase, history)
 
     partial = ""
     for chunk in generate_stream(prompt):
