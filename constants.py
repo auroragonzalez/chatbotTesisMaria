@@ -19,7 +19,7 @@ CUDA_VISIBLE_DEVICES = "0"
 
 # ── LLM endpoint (Ollama Cloud, formato OpenAI-compatible) ─────────────
 LLM_URL    = "https://ollama.com/v1/chat/completions"
-MODEL_NAME = "gemma3:27b"
+MODEL_NAME = "gemma4:31b"
 
 # ── Embeddings (HuggingFace; se descarga en el primer arranque) ────────
 EMBEDDING_MODEL  = "intfloat/multilingual-e5-base"
